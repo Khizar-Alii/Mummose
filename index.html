@@ -1,0 +1,1203 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mummus - Hummus & More</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="products.css">
+    <link rel="icon" href="Assets/logo.png" type="Assets/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@auto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="Assets+Fonts+Colors/Fonts/Belmonte Rough_0.ttf" />
+    <!-- css for index -->
+     <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#en").click(function () {
+                $('.en').css('display', 'block');
+                $('.se').css('display', 'none');
+            });
+            $('#se').click(function () {
+                $('.en').css('display', 'none');
+                $('.se').css('display', 'block');
+            });
+            if (window.location.href.indexOf("en") > -1) {
+                $('.en').css('display', 'block');
+                $('.se').css('display', 'none');
+            }
+            else {
+                $('.en').css('display', 'none');
+                $('.se').css('display', 'block');
+            };
+            $("#en1").click(function () {
+                $('.en').css('display', 'block');
+                $('.se').css('display', 'none');
+            });
+            $('#se1').click(function () {
+                $('.en').css('display', 'none');
+                $('.se').css('display', 'block');
+            });
+            if (window.location.href.indexOf("en1") > -1) {
+                $('.en').css('display', 'block');
+                $('.se').css('display', 'none');
+            }
+            else {
+                $('.en').css('display', 'none');
+                $('.se').css('display', 'block');
+            };
+            $(document).ready(function () {
+                $(this).scrollTop(0);
+            });
+            $("#dot1").click(function () {
+                $('html,body').animate({
+                    scrollTop: $("#section").offset().top - 50
+                }, 1500);
+            });
+            $("#dot2").click(function () {
+                $('html,body').animate({
+                    scrollTop: $("#section1").offset().top - 50
+                }, 1500);
+            });
+            $("#dot3").click(function () {
+                $('html,body').animate({
+                    scrollTop: $("#section2").offset().top
+                },
+                    1500);
+            });
+            $("#dot4").click(function () {
+                $('html,body').animate({
+                    scrollTop: $("#section3").offset().top
+                },
+                    1500);
+            });
+            $("#dot5").click(function () {
+                $('html,body').animate({
+                    scrollTop: $("#section4").offset().top
+                },
+                    1500);
+            });
+            $("#dot6").click(function () {
+                $('html,body').animate({
+                    scrollTop: $("#section5").offset().top
+                },
+                    1500);
+            });
+            $(document).ready(function () {
+                $('.dot').click(function () {
+                    $('span').removeClass("active");
+                    $(this).addClass("active");
+                });
+            });
+        });
+    </script>
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+    <div class="container-fluid p-0">
+        <div class="d-xl-block d-none" id="section">
+            <div class="row m-0">
+                <div class="col-12 p-0">
+                    <div class="">
+                        <img src="Assets/top_banner_bg.png" class="w-100 banner_img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="row">
+                    <div class="col-3 ml-auto">
+                        <img src="Assets/logo.png" class="imges" alt="">
+                    </div>
+                    <div class="col-8 pr-lg-0">
+                        <nav class="navbar navbar-expand-xl navbar-light">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav m-auto" style="display: flex;align-items: center;">
+                                    <li class="nav-item ">
+                                        <a class="nav-link en text-light" href="#section">
+                                            <span>Home</span>
+                                        </a>
+                                        <a class="nav-link se text-light" href="#section">
+                                            <span>HEM</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link en text-light" href="#section1">
+                                        <span>About</span>
+                                        </a>
+                                        <a class="nav-link se text-light" href="#section1">
+                                            <span>OM OSS</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link en text-light" href="#section2">
+                                            <span>Menu</span>
+                                        </a>
+                                        <a class="nav-link se text-light" href="#section2">
+                                            <span>MENY</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link en text-light" href="#section3">
+                                            <span>Gallery</span>
+                                        </a>
+                                        <a class="nav-link se text-light" href="#section3">
+                                            <span>GALLERI</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link en text-light" href="#section4">
+                                            <span>Contact</span>
+                                        </a>
+                                        <a class="nav-link se text-light" href="#section4">
+                                            <span>KONTAKT</span>
+                                        </a>
+                                        
+                                    </li>
+                                    <button class="cateringmenubtn">
+                                        <a href="/catering.html">Catering Menu</a>
+                                    </button>
+                                    
+                                    <!-- <li class="nav-item">
+                                        <a href="https://instagram.com/mummus.se?igshid=7toboeu31sp">
+                                            <i class="fa fa-instagram mr-lg-1 mr-0"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/Mummus-114979863593938/">
+                                            <i class="fa fa-facebook-f mr-lg-1 mr-0"></i>
+                                        </a>
+                                        <a href="mailto:info@mummus.se">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </li> -->
+                                    <li class="nav-item dropdown ml-lg-3 ml-0">
+                                        
+                                        <button class="btn btn-light dropdown" id="navbarDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div class="se">
+                                                <img src="Assets/swedish_flag.png" alt="" class="flag" />
+                                                <span class="d-inline-block px-2">Svenska</span>
+                                                <img class="pr-2" src="Assets/drop_down.png" alt="" />
+                                            </div>
+                                            <div class="en">
+                                                <img src="https://ilunch.nu/public/public_site_assets/images/e-flag.png"
+                                                    alt="" class="flag">
+                                                <span class="d-inline-block px-2">English</span>
+                                                <img class="pr-2" src="Assets/drop_down.png" alt="" />
+                                            </div>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" id="se" href="#se" title="">Svenska</a>
+                                            <a class="dropdown-item" id="en" href="#en">English</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row mt-5" id="section-2">
+                        <div class="col-md-5 mt-lg-5 mt-3">
+                            <h1 class="mb-4 en" style="font-family: 'belmonte'; color: #096e6c;">What is hummus?</h1>
+                            <h1 class="mb-4 se" style="font-family: 'belmonte'; color: #096e6c;">
+                                <img src="Assets/log-2.png" class="w-75"/>    
+                            </h1>
+                            <p class="pera en">Hummus is a savory, creamy, and yummy middle eastern dip.
+                                Hummus is traditionally made from mashed chickpeas mixed with fresh lemon juice,
+                                minced garlic, and a sesame paste called tahini. Hummus has become incredibly popular as
+                                a healthy dip or spread.
+                                At Mummus, we decided to take hummus to the next level!</p>
+                            <p class="pera se">Hummus är en krämig puré, tillverkad av mosade kikärtor blandad
+                                med färsk citronsaft, finhackad vitlök och tahini. Många känner till det som en
+                                nyttig dippröra eller ett härligt pålägg, men hos Mummus är hummus så mycket
+                                mer!
+                            </p>
+                            <a href="#section2" class="btn btn-primary bnt mt-lg-5 mt-2 en">View menu</a>
+                            <a href="#section2" class="btn btn-primary bnt mt-lg-5 mt-2 se">Vår meny </a>
+                        </div>
+                        <div class="col-md-6 mt-md-0 mt-3">
+                            <img src="Assets/top_banner_img.png" class="w-100 tob_banner_img" alt="">
+                        </div>
+
+                        <div class="col-md-1" id="myScrollspy">
+                            <ul class="nav nav-pills flex-column dot_slide">
+                                <li class="nav-item">
+                                    <a class="nav-link dot active" href="#section"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dot" href="#section1"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dot" href="#section2"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dot" href="#section3"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dot" href="#section4"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-xl-none d-block" id="section">
+            <div class="banner-1">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a href="" class="navbar-brand">
+                                <img src="Assets/logo.png" class="w-100" alt="">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                                <ul class="navbar-nav mr-auto text-right" style="display: flex;align-items: center;">
+                                    <li class="nav-item ">
+                                        <a class="nav-link en text-light" href="#section">
+                                            <span>Home</span>
+                                        </a>
+                                        <a class="nav-link se text-light" href="#section">
+                                            <span>HEM</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link en text-light" href="#section1">
+                                        <span>About</span>
+                                        </a>
+                                        <a class="nav-link se text-light" href="#section1">
+                                            <span>OM OSS</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link en text-light" href="#section2">
+                                            <span>Menu</span>
+                                        </a>
+                                        <a class="nav-link se text-light" href="#section2">
+                                            <span>MENY</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link en text-light" href="#section3"><span>Gallery</span></a>
+                                        <a class="nav-link se text-light" href="#section3"><span>GALLERI</span></a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link en text-light" href="#section4"><span>Contact</span></a>
+                                        <a class="nav-link se text-light" href="#section4"><span>KONTAKT</span></a>
+                                    </li><br/>
+                                    <button class="cateringmenubtn">
+                                        <a href="/catering.html">Catering Menu</a>
+                                    </button>
+                                    <li class="nav-item moblisticons" >
+                                        <a href="https://instagram.com/mummus.se?igshid=7toboeu31sp">
+                                            <i class="fa fa-instagram mr-lg-1 mr-0"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/Mummus-114979863593938/">
+                                            <i class="fa fa-facebook-f mr-lg-1 mr-0"></i>
+                                        </a>
+                                        <a href="mailto:info@mummus.se">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item dropdown ml-lg-3 ml-0 mt-lg-0 mt-2">
+                                        <button class="btn btn-light dropdown" id="navbarDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div class="se" style="display: block;">
+                                                <img src="Assets/swedish_flag.png" alt="" class="flag" />
+                                                <span class="d-inline-block px-2">Svenska</span>
+                                                <img class="pr-2" src="Assets/drop_down.png" alt="" />
+                                            </div>
+                                            <div class="en" style="display: none;">
+                                                <img src="https://ilunch.nu/public/public_site_assets/images/e-flag.png"
+                                                    alt="" class="flag">
+                                                <span class="d-inline-block px-2">English</span>
+                                                <img class="pr-2" src="Assets/drop_down.png" alt="" />
+                                            </div>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" id="se1" href="#se1" title="">Svenska</a>
+                                            <a class="dropdown-item" id="en1" href="#en1">English</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-lg-5 mt-lg-5 mt-3">
+                            <h1 class="mb-4 en" style="font-family: 'belmonte'; color: #096e6c;">What is hummus?</h1>
+                            <h1 class="mb-4 se" style="font-family: 'belmonte'; color: #096e6c;">
+                                <img src="Assets/log-2.png" class="w-75"/>    
+                            </h1>
+                            <p class="pera en">Hummus is a savory, creamy, and yummy middle eastern dip.
+                                Hummus is traditionally made from mashed chickpeas mixed with fresh lemon juice,
+                                minced garlic, and a sesame paste called tahini. Hummus has become incredibly popular as
+                                a healthy dip or spread.
+                                At Mummus, we decided to take hummus to the next level!</p>
+                            <p class="pera se">Hummus är en krämig puré, tillverkad av mosade kikärtor blandad
+                                med färsk citronsaft, finhackad vitlök och tahini. Många känner till det som en
+                                nyttig dippröra eller ett härligt pålägg, men hos Mummus är hummus så mycket
+                                mer!
+                            </p>
+                            <a href="#section2" class="btn btn-primary bnt mt-lg-5 mt-2 en">View menu</a>
+                            <a href="#section2" class="btn btn-primary bnt mt-lg-5 mt-2 se">Vår meny </a>
+                        </div>
+                        <div class="col-lg-6 mt-md-0 mt-3">
+                            <img src="Assets/top_banner_img.png" class="w-100 tob_banner_img" alt="">
+                        </div>
+
+                        <div class="col-md-1">
+                            <div class="dot_slide" style="text-align:center">
+                                <span class="dot active" id="dot1"></span>
+                                <span class="dot" id="dot2"></span>
+                                <span class="dot" id="dot3"></span>
+                                <span class="dot" id="dot4"></span>
+                                <span class="dot" id="dot5"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="p-4 shadow bg-white content" id="section1">
+            <div class="en text-center">
+                <h1 class="mb-4" style="font-family: 'belmonte'; color: #85c442; font-size: 50px;">Welcome to <span
+                        style="font-family: 'belmonte';color:#096e6c;">Mummus</span></h1>
+                <p class="font-16 pt-4 pb-4 par-we">Hummus, claimed by all, owned by none. We believe hummus is
+                    something that brings us together.
+                    Our love for food, passion for quality, and sense of creativity is what you will find in our
+                    kitchen! Besides the original hummus recipe, we offer innovative fusion flavours. Flavours that you
+                    might
+                    never encountered or imagined for hummus. We also offer a wide range of delicious add ons that
+                    make our dishes a hearty meal. Our menu also includes a variety of complementary sides including
+                    falafel, eggs, drinks , desserts, and more !</p>
+            </div>
+            <div class="se text-center">
+                <div class="row">
+                    <div class="col-md-6 m-auto">
+                        <h1 class="mb-4" style="font-family: 'belmonte'; color: #096e6c;">
+                             <img src="Assets/log.png" class="w-100" /> 
+                        </h1>
+                    </div>
+                </div>
+                <p class="font-16 pt-4 pb-4 par-we">Mycket har skrivits och sagts om hemligheten med hummus men vi tror
+                    inte att någon känner till
+                    den. Vi ser det bara som att det är något med hummus som förenar oss. Kärlek till mat och
+                    passion för kvalitet är det du hittar hos oss!
+                    Förutom det ursprungliga Hummus-receptet erbjuder vi andra smakkombinationer som du kanske
+                    aldrig föreställt dig. Vi serverar ett brett utbud av generös och välsmakande topping som
+                    gör våra rätter till en fullständig måltid, kolla vår meny! Du hittar även kompletterande
+                    tillbehör såsom falafel, ägg, sallad, drycker, desserter och mer!</p>
+            </div>
+        </div>
+
+        <div class="row m-0">
+            <div class="col-lg-6 col-md-8 m-auto">
+                <img src="Assets/chickpeas_img.png" alt="" class="w-100 mt-4">
+            </div>
+        </div>
+        <div class="text-center" id="section2">
+            <h1 class="mb-4 en" style="font-family: 'belmonte'; color: #096e6c;font-size: 50px;">
+                <span style="font-family: 'belmonte';color:#85c442;">Our</span> Menu </h1>
+            <h1 class="mb-4 se" style="font-family: 'belmonte'; color: #096e6c;font-size: 50px;">
+                <span style="font-family: 'belmonte';color:#85c442;">Vår</span> Meny </h1>
+        </div>
+        <div class="mt-5 mb-5 text-center">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner_1_se hh-100 se pt-5">
+                        <h1 class="fant-weight-bold hummus mt-1">Hummus</h1>
+                        <div class="row tabl d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18"><span style="color: #096e6c;">Beduin:
+                                    </span>tahinihummus</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">75:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18"><span style="color: #096e6c;">Bohemian: </span>
+                                    rödbetshummus</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">85:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18"><span style="color: #096e6c;">Daredevil: </span>
+                                    het chilihummus</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">80:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18"><span style="color: #096e6c;">Genovese:
+                                    </span>pestohummus</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">90:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left pr-lg-0">
+                                <h6 class="font-weight-bold font-18" ><span
+                                        style="color: #096e6c;">Greek:</span> yoghurt- och vitlökshummus</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">85:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18"><span
+                                        style="color: #096e6c;">Hippie:</span> persilje- och kikärtshummus</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">95:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col text-left">
+                                <h6 class="font-weight-bold font-18" >Bröd ingår. </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner_1_en hh-100 en pt-5">
+                        <h1 class="fant-weight-bold hummus mt-1">Hummus</h1>
+                        <div class="row tabl d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18"><span style="color: #096e6c;">Beduin:
+                                    </span>tahini hummus
+                                    </h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">75:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18"><span style="color: #096e6c;">Bohemian: </span>
+                                    beetroot hummus</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">85:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18"><span style="color: #096e6c;">Daredevil: </span>
+                                    spicy hummus</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">80:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18"><span style="color: #096e6c;">Genovese:
+                                    </span>pesto hummus</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">90:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left pr-lg-0">
+                                <h6 class="font-weight-bold font-18" ><span
+                                        style="color: #096e6c;">Greek:</span> garlic & yogurt hummus</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">85:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left pr-md-2 pr-0">
+                                <h6 class="font-weight-bold font-18" ><span
+                                        style="color: #096e6c;">Hippie:</span> parsley & chickpeas hummus</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">95:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18" >Bread is included. </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <img src="Assets/more_bg.png" class="w-100 en" alt="">
+                    <img src="Assets/more_se_bg.PNG" class="w-100 se" alt=""> -->
+                </div>
+                <div class="col-lg-6 mt-xll-0 ">
+                    <!-- <img src="Assets/add_ons_bg.png" class="w-100 en" alt="">
+                    <img src="Assets/add_one_se_bg.PNG" class="w-100 se" alt=""> -->
+                    <div class="banner_2_se hh-100 se pt-5">
+                        <div class="text-center">
+                            <h1 class="fant-weight-bold hummus">Tillägg</h1>
+                        </div>
+                        <div class="row tabl d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Sucukkorv & paprika</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">75:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Entrecôte i bitar</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">95:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18" >Kyckling och
+                                    soltorkade tomater</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">80:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Halloumi och gurka</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">75:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width  text-left">
+                                <h6 class="font-weight-bold font-18" >Rostade pinjenötter
+                                    och mandlar</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">60:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18" >Champinjoner och
+                                    timjan </h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">65:-</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner_2_en hh-100 en pt-5">
+                        <div class="text-center">
+                            <h1 class="fant-weight-bold hummus">Add Ons</h1>
+                        </div>
+                        <div class="row tabl d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Sucuk & paprika
+                                    </h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">75:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width  text-left">
+                                <h6 class="font-weight-bold font-18">
+                                    Chopped entrecote</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">95:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18" >
+                                    Chicken & sundried tomatoes</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">80:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">
+                                    Halloumi & cucumber   </h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">75:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left pr-lg-0">
+                                <h6 class="font-weight-bold font-18" >  
+                                    Pine nuts & almonds </h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">65:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18" >
+                                    Mushrooms & thyme </h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">65:-</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-5">
+                <div class="col-md-2 col-6 mt-lg-0 mt-1">
+                    <img src="Assets/menu-img-1.png" class="w-100" alt="">
+                </div>
+                <div class="col-md-2 d-md-block d-none"></div>
+                <div class="col-md-2 col-6 mt-lg-0 mt-1">
+                    <img src="Assets/menu-img-2.png" class="w-100" alt="">
+                </div>
+                <div class="col-md-2 col-6 mt-lg-0 mt-1">
+                    <img src="Assets/menu-img-3.png" class="w-100" alt="">
+                </div>
+                <div class="col-md-2 d-md-block d-none"></div>
+                <div class="col-md-2 col-6 mt-lg-0 mt-1">
+                    <img src="Assets/menu-img-4.png" class="w-100" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner_2_se hh-100 se pt-5">
+                        <div class="text-center">
+                            <h1 class="fant-weight-bold hummus">Mer</h1>
+                        </div>
+                        <div class="row tabl d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Falafel 3 st</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">35:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Labneh ost 3 st</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">35:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Oliver</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">30:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left pr-lg-0">
+                                <h6 class="font-weight-bold font-18">Makdous Inlagd aubergine</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">40:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Mini sallad </h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">35:-</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner_2_en hh-100 en pt-5">
+                        <div class="text-center">
+                            <h1 class="fant-weight-bold hummus">More</h1>
+                        </div>
+                        <div class="row tabl d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Falafel 3ps</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">35:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Labneh 3ps</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">35:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Olives</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">30:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left pr-lg-0">
+                                <h6 class="font-weight-bold font-18">Makdous pickled aubergines</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">40:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Mini salad </h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">35:-</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <img src="Assets/section-1_bg.png " class="w-100 en" alt=""> -->
+                    <!-- <img src="Assets/section.png " class="w-100 se" alt=""> -->
+                </div>
+                <div class="col-lg-6 mt-xll-0">
+                    <div class="banner_2_se hh-100 se pt-5">
+                        <div class="text-center">
+                            <h1 class="fant-weight-bold hummus">Något sött</h1>
+                        </div>
+                        <div class="row tabl d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Halva</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">40:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Baklava</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">50:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Kaffe, espresso</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">40:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left pr-lg-0">
+                                <h6 class="font-weight-bold font-18" >Te (kardemumma,
+                                    saffran, mint)</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">35:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Läsk, Ayran, juicer
+                                    och kolsyrat vatten </h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">30:-</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner_2_en en hh-100 pt-5">
+                        <div class="text-center">
+                            <h1 class="fant-weight-bold hummus">After</h1>
+                        </div>
+                        <div class="row tabl d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Halva</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">40:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Baklava</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">50:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18">Coffee, espresso</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">40:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left pr-lg-0">
+                                <h6 class="font-weight-bold font-18" >Tea (cardamom, saffron, mint )</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">35:-</h6>
+                            </div>
+                        </div>
+                        <div class="row pt-2 d-flex justify-content-between">
+                            <div class="col fit-width text-left">
+                                <h6 class="font-weight-bold font-18" >Sodas, Ayran, juices & sparkling wate</h6>
+                            </div>
+                            <div class="col-2">
+                                <h6 class="count">30:-</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <img src="Assets/section_bg.png " class="w-100 en" alt="">
+                    <img src="Assets/section-1.png" class="w-100 se" alt=""> -->
+                </div>
+            </div>
+        </div>
+        <div class="grly mb-5 row m-0" id="section3">
+            <div class="text-center mb-3 col-12">
+                <h1 class="mb-4 en" style="font-family: 'belmonte'; color: #096e6c;font-size: 50px;">
+                    <span style="font-family: 'belmonte';color:#85c442;">Our</span> Gallery </h1>
+                <h1 class="mb-4 se" style="font-family: 'belmonte'; color: #096e6c;font-size: 50px;">
+                    <span style="font-family: 'belmonte';color:#85c442;">Vårt </span> Galleri </h1>
+            </div>
+            <!-- <div class="col-md-6 p-3 h-100">
+                <div class=" grly-img text-white" style="background-image:url('Assets/gallary-img-1.png')">
+                    <div class="text-transparent se pt-5 p-4">
+                        <h1 class="font-weight-bold pt-5">What is loerm ipsum?</h1>
+                        <p class="font-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis
+                            ullam facere obcaecati iusto est sed facilis officia assumenda fugit amet, perferendis
+                            explicabo impedit nemo fuga ut similique laudantium qui?</p>
+                    </div>
+                    <div class="text-transparent en pt-5 p-4">
+                        <h1 class="font-weight-bold pt-5">What is loerm ipsum?</h1>
+                        <p class="font-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis
+                            ullam facere obcaecati iusto est sed facilis officia assumenda fugit amet, perferendis
+                            explicabo impedit nemo fuga ut similique laudantium qui?</p>
+                    </div>
+                    <div class="inner en p-4">
+                        <h1 class="font-weight-bold">What is loerm ipsum?</h1>
+                        <p class="font-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis
+                            ullam facere obcaecati iusto est sed facilis officia assumenda fugit amet, perferendis
+                            explicabo impedit nemo fuga ut similique laudantium qui?</p>
+                    </div>
+
+                    <div class="inner se p-4">
+                        <h1 class="font-weight-bold">What is loerm ipsum?</h1>
+                        <p class="font-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis
+                            ullam facere obcaecati iusto est sed facilis officia assumenda fugit amet, perferendis
+                            explicabo impedit nemo fuga ut similique laudantium qui?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-3 h-100">
+                <div class="bg-white border shadow-sm">
+                    <img src="Assets/gallery-img-2.png" class="w-100" alt="">
+                    <div class="en p-3 pt-4">
+                        <h5 class="text-basic pb-2 pt-1 font-weight-bold">What is Lorem Ipsum?</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas non nisi soluta</p>
+                        <button
+                            class="btn btn-green mt-2 mb-3 text-white rounded-pill text-capitalize pl-4 pr-4 font-weight-bold">read
+                            more</button>
+                    </div>
+                    <div class="se p-3 pt-4">
+                        <h5 class="text-basic pb-2 pt-1 font-weight-bold">What is Lorem Ipsum?</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas non nisi soluta</p>
+                        <button
+                            class="btn btn-green mt-2 mb-3 text-white rounded-pill text-capitalize pl-4 pr-4 font-weight-bold">read
+                            more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-3 h-100">
+                <div class="bg-white border shadow-sm">
+                    <img src="Assets/gallery-img-3.png" class="w-100" alt="">
+                    <div class="en p-3 pt-4">
+                        <h5 class="text-basic pb-2 pt-1 font-weight-bold">What is Lorem Ipsum?</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas non nisi soluta</p>
+                        <button
+                            class="btn btn-green mt-2 mb-3 text-white rounded-pill text-capitalize pl-4 pr-4 font-weight-bold">read
+                            more</button>
+                    </div>
+                    <div class="se p-3 pt-4">
+                        <h5 class="text-basic pb-2 pt-1 font-weight-bold">What is Lorem Ipsum?</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas non nisi soluta</p>
+                        <button
+                            class="btn btn-green mt-2 mb-3 text-white rounded-pill text-capitalize pl-4 pr-4 font-weight-bold">read
+                            more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-3 h-100">
+                <div class="bg-white border shadow-sm">
+                    <img src="Assets/gallery-img-5.png" class="w-100" alt="">
+                    <div class="en p-3 pt-4">
+                        <h5 class="text-basic pb-2 pt-1 font-weight-bold">What is Lorem Ipsum?</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas non nisi soluta</p>
+                        <button
+                            class="btn btn-green mt-2 mb-3 text-white rounded-pill text-capitalize pl-4 pr-4 font-weight-bold">read
+                            more</button>
+                    </div>
+                    <div class="se p-3 pt-4">
+                        <h5 class="text-basic pb-2 pt-1 font-weight-bold">What is Lorem Ipsum?</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas non nisi soluta</p>
+                        <button
+                            class="btn btn-green mt-2 mb-3 text-white rounded-pill text-capitalize pl-4 pr-4 font-weight-bold">read
+                            more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 p-3 h-100">
+                <div class=" grly-img text-white" style="background-image:url('Assets/gallery-img-4.png')">
+                    <div class="text-transparent en pt-5 p-4">
+                        <h1 class="font-weight-bold pt-5">What is loerm ipsum?</h1>
+                        <p class="font-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis
+                            ullam facere obcaecati iusto est sed facilis officia assumenda fugit amet, perferendis
+                            explicabo impedit nemo fuga ut similique laudantium qui?</p>
+                    </div>
+                    <div class="text-transparent se pt-5 p-4">
+                        <h1 class="font-weight-bold pt-5">What is loerm ipsum?</h1>
+                        <p class="font-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis
+                            ullam facere obcaecati iusto est sed facilis officia assumenda fugit amet, perferendis
+                            explicabo impedit nemo fuga ut similique laudantium qui?</p>
+                    </div>
+                    <div class="en inner p-4">
+                        <h1 class="font-weight-bold">What is loerm ipsum?</h1>
+                        <p class="font-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis
+                            ullam facere obcaecati iusto est sed facilis officia assumenda fugit amet, perferendis
+                            explicabo impedit nemo fuga ut similique laudantium qui?</p>
+                    </div>
+                    <div class="se inner p-4">
+                        <h1 class="font-weight-bold">What is loerm ipsum?</h1>
+                        <p class="font-20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis
+                            ullam facere obcaecati iusto est sed facilis officia assumenda fugit amet, perferendis
+                            explicabo impedit nemo fuga ut similique laudantium qui?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-3 h-100">
+                <div class="bg-white border shadow-sm">
+                    <img src="Assets/gallery-img-2.png" class="w-100" alt="">
+                    <div class="en p-3 pt-4">
+                        <h5 class="text-basic pb-2 pt-1 font-weight-bold">What is Lorem Ipsum?</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas non nisi soluta</p>
+                        <button
+                            class="btn btn-green mt-2 mb-3 text-white rounded-pill text-capitalize pl-4 pr-4 font-weight-bold">read
+                            more</button>
+                    </div>
+                    <div class="se p-3 pt-4">
+                        <h5 class="text-basic pb-2 pt-1 font-weight-bold">What is Lorem Ipsum?</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas non nisi soluta</p>
+                        <button
+                            class="btn btn-green mt-2 mb-3 text-white rounded-pill text-capitalize pl-4 pr-4 font-weight-bold">read
+                            more</button>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-12 text-center mt-5">
+                <!-- <h1 class="en" style="font-family: 'belmonte'; color: #096e6c;"><span
+                        style="font-family: 'belmonte';color:#85c442;">Coming</span> Soon...</h1> -->
+                <!-- <h1 class="se" style="font-family: 'belmonte'; color: #096e6c;"><span
+                        style="font-family: 'belmonte';color:#85c442;">Kommer </span> Snart...</h1> -->
+                        <div class="container gallery">
+                          <div class="row mb-15px">
+                            <a href="Assets/food1.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food1.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food2.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food2.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food3.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food3.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food7.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food8.jpg" class="img-fluid rounded">
+                            </a>
+                          </div>
+                          <div class="row mb-15px">
+                            <a href="Assets/food4.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food4.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food5.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food5.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food6.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food6.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food8.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food8.jpg" class="img-fluid rounded">
+                            </a>
+                          </div>
+                          <div class="row mb-15px">
+                            <a href="Assets/food9.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food9.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food10.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food10.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food11.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food11.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food12.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food12.jpg" class="img-fluid rounded">
+                            </a>
+                          </div>
+                          <div class="row mb-15px">
+                            <a href="Assets/food13.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food13.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food14.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food14.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food16.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food16.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food17.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food17.jpg" class="img-fluid rounded">
+                            </a>
+                          </div>
+                          <div class="row mb-15px">
+                            <a href="Assets/food18.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food18.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food19.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food19.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food20.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food20.jpg" class="img-fluid rounded">
+                            </a>
+                            <a href="Assets/food21.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+                              <img src="Assets/food21.jpg" class="img-fluid rounded">
+                            </a>
+                          </div>
+                        </div>
+            </div>
+        </div>
+
+        <div class="contact row ml-0 mr-0 mt-lg-5 pt-5" id="section4">
+            <div class="col-md-6 mt-5">
+                <h1 class="mb-4 en" style="font-family: 'belmonte'; color: #096e6c;font-size: 50px;">
+                    <span style="font-family: 'belmonte';color:#85c442;">Contact</span> Us </h1>
+                <h1 class="mb-4 se" style="font-family: 'belmonte'; color: #096e6c;font-size: 50px;">
+                    <span style="font-family: 'belmonte';color:#85c442;">Kontakta </span> Oss </h1>
+                <p class="en response">
+                    <img src="Assets/location.png" alt="" class="locton pr-1 mt-1"> <span span class="ml-2">Klara Norra Kyrkogata32
+                     <br>
+                    11122 Stockholm</span>
+                </p>
+                <p class="se response d-inline-flex">
+                    <img src="Assets/location.png" alt="" class="locton pr-1 mt-1"> <span class="ml-2">Klara Norra Kyrkogata 32
+                          <br>
+                    11122 Stockholm </span>
+                </p>
+                <p class="en ">
+                    <img src="Assets/phone.png" alt="" class="locton pr-2">+46 701 75 65 65
+                </p>
+                <p class="se">
+                    <img src="Assets/phone.png" alt="" class="locton pr-2">+46 701 75 65 65
+                </p>
+                <p class="en">
+                    <i class="fa fa-envelope pr-2" style="color: #096e6c;"></i>
+                    info@mummus.se
+                </p>
+                <p class="se">
+                    <i class="fa fa-envelope pr-2" style="color: #096e6c;"></i>
+                    info@mummus.se
+                </p>
+                <p class="en">
+                    <img src="Assets/time.png" alt="" class="locton pr-1"> Please check our opening hours <a href="https://g.co/kgs/T1pnvYw">here</a>
+                </p>
+                <p class="se">
+                    <img src="Assets/time.png" alt="" class="locton pr-1"> Våra öppettider finns <a href="https://g.co/kgs/T1pnvYw">här</a>
+                </p>
+                <h1 class="mb-2 mt-5 en" style="font-family: 'belmonte'; color: #096e6c;font-size: 30px;">
+                    Follow Us </h1>
+                <h1 class="mb-2 mt-5 se" style="font-family: 'belmonte'; color: #096e6c;font-size: 30px;">
+                    Följ Oss </h1>
+                <div class="socialmedia pt-3">
+                    <a href="https://instagram.com/mummus.se?igshid=7toboeu31sp">
+                        <img src="Assets/Instagram-green.png" alt="" class="mr-3 non-hover">
+                        <img src="Assets/Instagram.png" alt="" class="mr-3 hover">
+                    </a>
+                    <a href="https://www.facebook.com/Mummus-114979863593938/">
+                        <img src="Assets/Facebook-green.png" alt="" class="mr-3 non-hover">
+                        <img src="Assets/Facebook.png" alt="" class="mr-3 hover">
+                    </a>
+                    <a href="mailto:info@mummus.se">
+                        <img src="Assets/email-green.png" alt="" class="mr-3 non-hover">
+                        <img src="Assets/email.png" alt="" class="mr-3 hover">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 pt-3 mt-lg-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.9034643273696!2d18.05573091615477!3d59.334565517644776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d6725633ffd%3A0xf7cc2bfa147b6a9e!2sKlara%20Norra%20kyrkogata%2032%2C%20111%2022%20Stockholm%2C%20Sweden!5e0!3m2!1sen!2s!4v1594796555953!5m2!1sen!2s" 
+                class="w-100 map" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="section5">
+        <div class="row m-0 footer-section pb-4">
+            <div class="col-lg-3 col-md-4 self-flex text-md-center">
+                <img src="Assets/footerlogo.png" class="w-50" alt="" />
+            </div>
+            <div class="col-lg-6 col-md-6 pl-4  text-white text-uppercase self-flex ">
+                <div class="footer-headings en">
+                    <a href="#section" class="text-reset"><span class="">home</span></a>
+                    <a href="#section1" class="text-reset"><span class="">About</span></a>
+                    <a href="#section2" class="text-reset"><span class="">Menu</span></a> <br
+                        class="d-lg-none d-md-block d-none">
+
+                    <a href="#section3" class="text-reset"><span class="">Gallery</span></a>
+                    <a href="#section4" class="text-reset"><span class="">Contact</span></a> <br>
+                    <small class="pl-lg-3 pt-2 title-1">Mummus 2020. All Rights Reserved</small>
+                </div>
+                <div class="footer-headings se">
+                    <a href="#section" class="text-reset"><span class="">HEM</span></a>
+                    <a href="#section1" class="text-reset"><span class="">OM OSS</span></a>
+                    <a href="#section2" class="text-reset"><span class="">MENY</span></a> <br
+                        class="d-lg-none d-md-block d-none">
+
+                    <a href="#section3" class="text-reset"><span class="">GALLERI</span></a>
+                    <a href="#section4" class="text-reset"><span class="">KONTAKT</span></a> <br>
+                    <div class="pl-lg-3 mt-2 title-1">Mummus 2020. Alla rättigheter förbehålls</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="lightbox.js"></script>
+</body>
+<script type="text/javascript">
+    $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
+</script>
+</html>

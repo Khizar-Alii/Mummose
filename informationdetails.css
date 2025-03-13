@@ -1,0 +1,148 @@
+.headline {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.headline .firsttitle {
+    font-family: Gontserrat;
+    font-weight: 700;
+    font-size: 24px;
+    color: #232323;
+}
+
+.headline .secondtitle {
+    font-family: Gontserrat;
+    font-weight: 400;
+    font-size: 24px;
+    color: #232323;
+}
+
+/* Form Container */
+.form-container {
+    margin: 15px 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    font-family: 'Gontserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #232323;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Input Fields */
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #00706E;
+    border-radius: 10px;
+    font-family: 'Gontserrat', sans-serif;
+    font-size: 16px;
+    color: #232323;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+/* Address Verification Section */
+.address-verification {
+    margin-top: 20px;
+    
+}
+.address-verification-inputs{
+    border: 0.5px solid #00706E; 
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.address-verification-inputs input {
+    border: none;
+    border-bottom: 0.5px solid #00706E;
+}
+
+.address-verification-inputs h3 {
+    font-family: 'Gontserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #096e6c;
+    margin-bottom: 15px;
+}
+
+/* Error Messages */
+.error-message {
+    color: #ff0000;
+    font-family: 'Gontserrat', sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 15px;
+    background-color: #00706E;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Gontserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #005f5d;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    input,
+    textarea {
+        padding: 12px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+    .headline {
+        gap: 10px;
+        padding: 5px 30px;
+    }
+    
+    .headline .firsttitle {
+        font-size: 18px;
+    }
+    
+    .headline .secondtitle {
+        font-size: 18px;
+    }
+}

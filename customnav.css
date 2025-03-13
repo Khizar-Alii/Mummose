@@ -1,0 +1,128 @@
+/* Navbar Styles */
+.navbar {
+    height: 80px;
+    /* Adjust this to match your logo height */
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+
+.navbar-brand {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 300px;
+    padding-top: 100px !important;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* Ensure nav items take the full height of the navbar */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* Ensure links take the full height of the navbar */
+    padding: 0 10px;
+}
+
+@media screen and (max-width : 1050px) {
+    .logo-img {
+        height: 250px;
+        padding-top: 70px !important;
+    }
+}
+
+@media screen and (max-width : 800px) {
+    .logo-img {
+        height: 150px;
+        padding-top: 50px !important;
+    }
+}
+
+@media screen and (max-width : 650px) {
+    .logo-img {
+        height: 100px;
+        padding-top: 0 !important;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .logo-img {
+        height: 60px;
+    }
+}
+
+
+.moblisticons {
+    display: none !important;
+}
+
+/* Background color for the dropdown menu */
+@media (max-width: 1200px) {
+    .navbar-collapse {
+        background-color: #000;
+        /* Black background color */
+        padding: 10px;
+        /* Add some padding for better spacing */
+        border-radius: 5px;
+        /* Optional: Add rounded corners */
+    }
+
+    .navbar-nav {
+        width: 100%;
+        /* Ensure the nav takes full width */
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        /* Add spacing between items */
+    }
+
+    .nav-link {
+        color: #fff !important;
+        /* Ensure text is white */
+    }
+
+    .cateringmenubtn a {
+        color: #fff !important;
+        /* Ensure button text is white */
+    }
+
+    .dropdown-menu {
+        background-color: #000;
+        /* Black background for dropdown items */
+    }
+
+    .dropdown-item {
+        color: #fff !important;
+        /* Ensure dropdown text is white */
+    }
+
+    .dropdown-item:hover {
+        background-color: #333;
+        /* Darker background on hover */
+    }
+}
+
+@media screen and (max-width : 1200px) {
+    .moblisticons {
+        display: block !important;
+    }
+
+}

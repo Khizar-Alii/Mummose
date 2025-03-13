@@ -1,0 +1,266 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+
+.cartModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 100vh;
+    background: white;
+    z-index: 10001;
+    pointer-events: auto;
+    flex-direction: column;
+}
+
+.cart-heading-top {
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #388A89;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.cartModalContent {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Cart Page Styles */
+.cartPage {
+    max-width: 1200px;
+    /* margin: 0 auto; */
+    /* padding: 20px; */
+}
+
+.cartCont {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    width: 100% !important;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid grey;
+}
+
+.cartContLeft {
+    display: flex;
+    width: 50%;
+    gap: 20px;
+    /* padding: 10px 0; */
+}
+
+.cartContLeft img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    /* margin-right: 20px; */
+}
+
+.cartContLeftContent h3 {
+    /* font-family: Gontserrat; */
+    font-weight: 400;
+    font-size: 12px;
+    color: #232323;
+}
+
+.cartContLeftContent h1 {
+    font-family: belmonte;
+    font-weight: 400;
+    font-size: 21px;
+    color: #388A89;
+}
+
+.cartContLeftContent p {
+    font-size: 12px;
+    color: #777;
+    padding: 0;
+    margin: 0;
+}
+
+.cartContRight {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.cartContRight p {
+    /* font-family: Gontserrat; */
+    font-weight: 400;
+    font-size: 10px;
+    color: #232323;
+    padding: 0;
+    margin: 0;
+}
+
+.cartContRight span {
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 20px;
+    color: #232323;
+    margin: 0;
+    padding: 2px 0;
+}
+
+/* Quantity Button */
+.quantityBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    color: white;
+    border: 1px solid #00706E;
+    border-radius: 50px;
+    padding: 0 10px;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.quantityBtn button {
+    background-color: transparent;
+    border: none !important;
+    outline: none !important;
+    color: #000000;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.quantityBtn span {
+    font-size: 20px;
+    font-weight: 900;
+    color: #000000;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* Total and Checkout Section */
+.cartTotal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.cartTotal p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 18px;
+    color: #232323;
+    margin: 0;
+}
+
+.cartTotal span {
+    /* font-family: Gontserrat; */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+#totalPrice {
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+    text-decoration-skip-ink: auto;
+    color: #6EC64C;
+}
+
+.checkoutBtn {
+    background: #00706E;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 0;
+    font-size: 18px;
+    font-weight: 400;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.checkoutBtn a {
+    color: white;
+}
+
+.checkoutBtn:hover {
+    background: #005f5d;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+
+    /* .cartCont {
+        flex-direction: column;
+        align-items: flex-start;
+    } */
+    .cartModal {
+        width: 100%;
+    }
+
+    .cartContLeft,
+    .cartContRight {
+        width: 100%;
+    }
+
+    .cartContRight {
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .quantityBtn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cartCont {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.empty-cart-message {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

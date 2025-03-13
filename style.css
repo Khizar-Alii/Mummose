@@ -1,0 +1,513 @@
+@font-face {
+  font-family: 'belmonte';
+  src :url("Assets+Fonts+Colors/Fonts/Belmonte\ Rough_0.ttf");
+}
+.dropdown-menu{
+    min-width: 7.5rem !important;
+}
+.imges{
+    width: 70%;
+}
+@media only screen and (min-width: 838px) {
+  .container {
+    max-width: 815px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 985px;
+  }
+  .hh-100{
+          min-height: 435px;
+  }
+}
+@media only screen and (max-width: 992px) {
+.mt-xll-0{
+    margin-top:10px;
+}
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1255px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .nav-link{
+    padding: 7px 7px !important;
+    font-size: 12px !important;
+    white-space: nowrap;
+  }
+  .imges{
+      width: 60% !important;
+  }
+  .navbar-brand{
+    width: 18% !important;
+  }
+  .tob_banner_img{
+    margin-top: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .tob_banner_img{
+    margin-top: 0px !important;
+  }
+  .imges{
+      width: 50% !important;
+  }
+  .content{
+    margin-top: 90px !important;
+  }
+  .navbar-brand{
+    width: 15% !important;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .tob_banner_img {
+    margin-top: 0px !important;
+  }
+  .footer-section {
+    height: auto !important;
+    padding-top: 30px !important;
+  }
+  .dot {
+    display: none !important;
+  }
+  
+  .content {
+    margin-top: 40px !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+    .banner_2_se .font-18{
+        font-size: 11px !important;    
+    }
+    .banner_2_en .font-18{
+        font-size: 11px !important;    
+    }
+    .tabl{
+        padding-top: 30px !important;
+    }
+    .bnt{
+        width: 100% !important;
+    }
+    
+    .banner_1_en .font-18{
+        font-size: 11px !important;    
+    }
+    .banner_1_se .font-18{
+        font-size: 11px !important;    
+    }
+    .hummus{
+        font-size: 20px !important;
+    }
+    .count{
+        font-size: 13px !important;
+        text-align: right !important;
+    }
+}
+@media only screen and (min-width: 1550px) {
+  .container {
+    max-width: 1340px;
+  }
+}
+.bnt{
+    width: 50%;
+}
+.navbar-brand{
+  width: 50%;
+}
+.banner_1_se {
+  background-image: url(Assets/after_bg.png);
+  border-bottom: 2px solid black;
+  background-repeat: no-repeat;
+  background-size: 100% 130%;
+  position: relative;
+  /* padding-bottom: 15px; */
+}
+.navbar-nav .nav-item .nav-link span:hover{
+    color: #f7ec97 !important;
+    border-bottom: 2px solid #f7ec97 !important;
+    padding-bottom: 10px;
+}
+.navbar-nav .nav-item .nav-link:hover{
+    color: white !important;
+}
+.text-reset span:hover{
+    color: #f7ec97 !important;
+    border-bottom: 2px solid #f7ec97 !important;
+    padding-bottom: 10px;
+}
+.banner_2_se {
+  background-image: url(Assets/after_bg.png);
+  border-bottom: 2px solid black;
+  background-repeat: no-repeat;
+  background-size: 100% 130%;
+  position: relative;
+  /* padding-bottom: 52px; */
+}
+ .fit-width{
+  min-width: fit-content !important;
+  max-width: max-content !important;
+ }
+.banner-1 {
+  background-image: url(Assets/top_banner_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.border-1 {
+  border-top-style: dotted;
+}
+.hummus{
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  font-weight: 400;
+  font-size: 35px;
+  font-family: 'belmonte';
+  color: white;
+  transform: translateX(-50%);
+}
+.tabl {
+  padding-top: 90px;
+}
+
+.banner_1_en {
+  background-image: url(Assets/after_bg.png);
+  border-bottom: 2px solid black;
+  background-repeat: no-repeat;
+  background-size: 100% 130%;
+  /* padding-bottom: 15px; */
+}
+.banner_2_en {
+  background-image: url(Assets/after_bg.png);
+  border-bottom: 2px solid black;
+  background-repeat: no-repeat;
+  background-size: 100% 130%;
+  position: relative;
+  /* padding-bottom: 48px; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.gallery img{
+  width: 100%;
+  height: 200px;
+  margin-bottom: 27px;
+}
+/*.ekko-lightbox .modal-dialog {
+    max-width: 500px !important;
+    margin: 1.75rem auto;
+}*/
+  
+.ekko-lightbox-nav-overlay a:First-child{
+  position: absolute;
+    top: 41%;
+    left: 0px;
+    font-size: 50px;
+    color: #426221b0;
+}
+.ekko-lightbox-nav-overlay a:Last-child{
+  position: absolute;
+    top: 41%;
+    right: 0px;
+    font-size: 50px;
+    color: #426221b0;
+}
+/*.ekko-lightbox-container{
+  height: 400px !important;
+}*/
+/*.ekko-lightbox .modal-body{
+  height: 400px !important;
+}*/
+.row {
+  margin: 0px !important;
+}
+.footer-headings a {
+  font-size: 13px;
+  padding: 10px 34px 10px 15px;
+  letter-spacing: 1px;
+}
+
+.footer-headings a:hover {
+  text-decoration: none !important;
+}
+
+.footer-section {
+  height: 100%;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.banner {
+  position: absolute;
+  width: 100%;
+  top: 35px;
+}
+
+.nav-link {
+  padding: 7px 20px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.btn-light {
+  border-radius: 40px;
+  padding: 1px;
+}
+
+.banner_img {
+  padding-left: 150px;
+}
+
+.nav-item i {
+  background-color: white;
+  height: 35px;
+  font-size: 20px;
+  color: #85c442;
+  border-radius: 100%;
+  width: 35px;
+  text-align: center;
+  padding-top: 8px;
+  display: inline-block;
+}
+
+.flag {
+  width: 32px;
+}
+
+.content {
+  margin-top: 270px;
+}
+
+.tob_banner_img {
+  margin-top: -156px;
+}
+
+.pera {
+  font-weight: 300 !important;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.title-1 {
+  text-transform: lowercase;
+  color: #daedc6;
+  font-size: 14px;
+}
+
+.en {
+  display: none;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  cursor: pointer;
+  padding: 0px !important;
+  margin-left: auto;
+  background-color: #cfdd33;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  display: block;
+  transition: background-color 0.6s ease;
+}
+
+.bnt {
+  background-color: #5ba244 !important;
+  text-transform: uppercase;
+  border: 1px solid #5ba244;
+  letter-spacing: 5px;
+  font-weight: 100 !important;
+  padding: 13px 30px !important;
+  border-radius: 50px;
+}
+
+.dot_slide {
+  position: fixed;
+  right: 65px;
+  top: 70%;
+  z-index: 1111111;
+}
+
+.bnt:hover {
+  background-color: white !important;
+  border: 1px solid #5ba244 !important;
+  color: #5ba244;
+}
+
+/* footer css start */
+
+.footer {
+  background: url("Assets/footer bg.png");
+  height: 337px;
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-16 {
+  font-size: 18px;
+}
+
+.locton {
+  height: 15px;
+  margin-top: -6px;
+}
+
+.active {
+  background-color: #85c442 !important  ;
+}
+
+.flow {
+  width: 170px;
+  padding-top: 38px;
+  padding-bottom: 18px;
+}
+
+.hover {
+  display: none;
+}
+
+.socialmedia span:hover .hover {
+  background: #85c442;
+  border-radius: 100%;
+  border: 2px solid #85c442;
+  display: inline-block;
+  width: 49px;
+  height: 49px;
+}
+
+.non-hover {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #85c442;
+}
+
+.socialmedia span:hover .non-hover {
+  display: none;
+}
+
+.count {
+  color: #80c749;
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.map {
+  height: 114%;
+}
+
+.grly-img {
+  background-repeat: no-repeat;
+  background: 100% 100%;
+  min-height: 432px !important;
+  position: relative;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.par-we {
+  color: #575757;
+  line-height: 2.3rem;
+}
+
+.inner {
+  height: max-content;
+  background: #000000ad;
+  position: absolute;
+  bottom: 0;
+}
+
+.welcom-heading {
+  width: 600px;
+}
+
+.text-basic {
+  color: #85c442;
+  color: #096e6c;
+}
+
+.text-green {
+  color: #85c442;
+}
+
+.btn-green {
+  background: #85c442;
+}
+
+.glry-heading {
+  width: 360px;
+}
+
+.self-flex {
+  align-self: flex-end;
+}
+
+/* footer css end */
+
+/* On smaller screens, decrease text size */
+
+@media (max-width: 992px) {
+  .cntnt {
+    width: 90%;
+  }
+  .flow {
+    width: 147px;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    background-color: #85c442;
+    height: 250px;
+  }
+  .map {
+    height: 400px;
+    margin-bottom: 30px;
+  }
+  .welcom-heading {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .text {
+    font-size: 11px;
+  }
+  .dot_slide {
+    margin-top: 10px !important;
+    margin-right: 10px !important;
+  }
+  .glry-heading {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    height: auto;
+  }
+  .footer span {
+    display: block;
+  }
+}

@@ -1,0 +1,461 @@
+.headline {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Gontserrat */
+.headline .firsttitle {
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 24px;
+    color: #232323;
+}
+
+.headline .secondtitle {
+    /* font-family: Gontserrat; */
+    font-weight: 400;
+    font-size: 24px;
+    color: #232323;
+}
+
+@media screen and (max-width : 765px) {
+    .headline {
+        gap: 10px;
+        padding: 5px 30px;
+    }
+
+    .headline .firsttitle {
+        font-size: 18px;
+    }
+
+    .headline .secondtitle {
+        font-size: 18px;
+    }
+}
+
+
+
+
+/* Payment Container */
+.PaymentCont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* width: 100%; */
+    padding: 20px;
+    background-color: white;
+    margin: 10px 20px;
+    border-radius: 15px;
+}
+
+.PaymentContLeft,
+.PaymentContRight {
+    flex: 1 1 48%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+
+    .PaymentContLeft,
+    .PaymentContRight {
+        flex: 1 1 100%;
+    }
+}
+
+/* Payment Left Top */
+.PaymentContLeftTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #00706E;
+    padding-bottom: 20px;
+}
+
+.PaymentContLeftTopLeft {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.PaymentContLeftTopLeft img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.PaymentContLeftTopContent {
+    gap: 10px;
+}
+
+.PaymentContLeftTopContent h3 {
+    /* font-family: Gontserrat; */
+    font-weight: 400;
+    font-size: 14px;
+    color: #232323;
+    padding: 0;
+    margin: 0;
+}
+
+.PaymentContLeftTopContent h1 {
+    font-family: belmonte;
+    font-weight: 400;
+    font-size: 21px;
+    color: #388A89;
+
+}
+
+.PaymentContLeftTopContent p {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.PaymentContLeftTopRight {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.PaymentContLeftTopRight p {
+    /* font-family: Gontserrat; */
+    font-weight: 400;
+    font-size: 14px;
+    color: #232323;
+    margin: 0;
+    padding: 0;
+}
+
+.PaymentContLeftTopRight span {
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 16px;
+    color: #232323;
+}
+
+/* Order Options */
+
+.totalOrderHeading {
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #232323;
+    padding-bottom: 10px;
+
+}
+
+.totalOrderCont {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 60px;
+}
+
+.PaymentContLeftOrderOptions {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #00706E;
+}
+
+.PaymentContLeftOrderOptions label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Total Order */
+.PaymentContLeftTotalOrder {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #00706E;
+
+}
+
+.PaymentContLeftTotalOrder div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#deliveryCharges,
+#salesTax {
+    /* font-family: Gontserrat; */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+    text-decoration-skip-ink: auto;
+    color: #232323;
+}
+
+
+
+.totalOrdermain {
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #232323;
+    padding-bottom: 10px;
+}
+
+#totalOrder {
+    /* font-family: Gontserrat; */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #232323;
+}
+
+.totalOrderprice {
+    margin-left: 20px !important;
+}
+
+
+/* total amount container */
+.totalAmountDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #00706E;
+    padding-bottom: 10px;
+}
+
+.totalAmount span {
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #232323;
+}
+
+.totalAmountDiv #totalAmount {
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+    text-decoration-skip-ink: auto;
+    color: #6EC64C;
+}
+
+/* Date and Time Picker */
+.PaymentContLeftDatePicker,
+.PaymentContLeftTimePicker {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.PaymentContLeftTimePicker {
+    border-bottom: 1px solid #00706E;
+}
+
+.PaymentContLeftDatePicker input,
+.PaymentContLeftTimePicker input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ECECEC;
+}
+
+.PaymentContLeftDatePicker span,
+.PaymentContLeftTimePicker span {
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #232323;
+}
+
+/* Special Instructions */
+
+.PaymentContLeftSpecialInst h2 {
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #232323;
+}
+
+.PaymentContLeftSpecialInst textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
+
+/* PaymentConRight */
+
+.PaymentContRight {
+    padding: 5px 20px;
+}
+
+/* Payment Information Heading */
+.paymentHeading {
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #232323;
+    padding: 10px 0;
+}
+
+/* Payment Labels */
+.paymentLabel {
+    /* font-family: Gontserrat; */
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #232323;
+}
+
+/* Payment Inputs */
+.paymentInput {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    /* font-family: Gontserrat; */
+    font-size: 14px;
+    background-color: #ECECEC;
+    outline: none;
+    border: none;
+}
+
+/* Card Information Input Container */
+.cardInfoInputContainer {
+    position: relative;
+}
+
+.cardInfoInput {
+    padding-right: 120px;
+    /* Space for card icons */
+}
+
+.cardIcons {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardIcons img {
+    width: 30px;
+    height: auto;
+}
+.cvcContainer{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-family: Gontserrat;
+    font-size: 14px;
+    background-color: #ECECEC;
+    outline: none;
+    border: none;
+}
+.cvcContainer input {
+    font-size: 14px;
+    background-color: #ECECEC;
+    outline: none;
+    border: none;
+}
+
+/* Expiry Date and CVC Container */
+.expiryCvcContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.expiryDateInput,
+.cvcContainer {
+    flex: 1;
+}
+
+/* Billing Address Checkbox */
+.billingAddressCheckboxContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.billingAddressCheckboxContainer label {
+    /* font-family: Gontserrat; */
+    font-weight: 400;
+    font-size: 18px;
+    color: #232323;
+    padding: 0;
+    margin: 0;
+}
+
+/* Proceed with Payment Button */
+.proceedPaymentButton {
+    width: 100%;
+    padding: 15px;
+    background-color: #096e6c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    /* font-family: Gontserrat; */
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.proceedPaymentButton:hover {
+    background-color: #075a58;
+}
+
+/* Error Messages */
+.errorMessage {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Highlight invalid inputs */
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: #ccc;
+}
