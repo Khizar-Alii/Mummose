@@ -132,7 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
   totalOrderCont.classList.add("totalOrderCont");
   paymentContLeftOrderOptions.appendChild(totalOrderCont);
 
-
   const totalOrderContWrap = document.createElement("div");
   totalOrderContWrap.classList.add("totalOrderContWrap");
 
@@ -148,8 +147,8 @@ document.addEventListener("DOMContentLoaded", () => {
       Pickup
     `;
 
-    totalOrderContWrap.appendChild(deliveryOption)
-    totalOrderContWrap.appendChild(pickupOption)
+  totalOrderContWrap.appendChild(deliveryOption);
+  totalOrderContWrap.appendChild(pickupOption);
   totalOrderCont.appendChild(totalOrderContWrap);
   paymentContLeft.appendChild(paymentContLeftOrderOptions);
 
@@ -252,17 +251,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get the PaymentContRight container
   const paymentContRight = document.querySelector(".PaymentContRight");
 
-   // Add Payment Information Heading
-   const paymentHeading = document.createElement("h2");
-   paymentHeading.textContent = "Payment Information";
-   paymentHeading.classList.add("paymentHeading");
-   paymentContRight.appendChild(paymentHeading);
+  // Add Payment Information Heading
+  const paymentHeading = document.createElement("h2");
+  paymentHeading.textContent = "Payment Information";
+  paymentHeading.classList.add("paymentHeading");
+  paymentContRight.appendChild(paymentHeading);
 
   const paymentContRightWrapper = document.createElement("div");
-  paymentContRightWrapper.classList.add("paymentContRightWrapper")
-  paymentContRight.appendChild(paymentContRightWrapper)
-
- 
+  paymentContRightWrapper.classList.add("paymentContRightWrapper");
+  paymentContRight.appendChild(paymentContRightWrapper);
 
   // Add Name on Card Label and Input
   const nameOnCardLabel = document.createElement("label");
@@ -326,19 +323,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const CvcContainer = document.createElement("div");
   CvcContainer.classList.add("cvcContainer");
 
-
   const cvcInput = document.createElement("input");
   cvcInput.type = "text";
   cvcInput.placeholder = "CVC";
-  cvcInput.classList.add( "cvcInput");
+  cvcInput.classList.add("cvcInput");
 
   // img
   const cvvIcon = document.createElement("img");
   cvvIcon.src = "Assets/cvc 1.png"; // Replace with actual path
   cvvIcon.alt = "cvc";
 
-  CvcContainer.appendChild(cvcInput)
-  CvcContainer.appendChild(cvvIcon)
+  CvcContainer.appendChild(cvcInput);
+  CvcContainer.appendChild(cvvIcon);
 
   expiryCvcContainer.appendChild(expiryDateInput);
   expiryCvcContainer.appendChild(CvcContainer);
@@ -353,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const billingAddressCheckbox = document.createElement("input");
   billingAddressCheckbox.type = "checkbox";
   billingAddressCheckbox.id = "billingAddressCheckbox";
-  billingAddressCheckbox.classList.add("topping-radio-payment")
+  billingAddressCheckbox.classList.add("topping-radio-payment");
 
   const billingAddressLabel = document.createElement("label");
   billingAddressLabel.textContent =
@@ -430,7 +426,7 @@ const clearError = (inputElement) => {
 };
 
 // Add event listeners for validation
-nameOnCardInput.addEventListener("input", () => {
+nameOnCardInput?.addEventListener("input", () => {
   if (!validateNameOnCard(nameOnCardInput.value)) {
     displayError(
       nameOnCardInput,
@@ -499,3 +495,40 @@ proceedPaymentButton.addEventListener("click", (e) => {
     // Redirect or perform further actions here
   }
 });
+
+// Add event listeners to delivery options
+const deliveryOptionInput = document.querySelector('input[name="deliveryOption"][value="delivery"]');
+const pickupOptionInput = document.querySelector('input[name="deliveryOption"][value="pickup"]');
+
+deliveryOptionInput.addEventListener("change", updateDeliveryCharges);
+pickupOptionInput.addEventListener("change", updateDeliveryCharges);
+// Function to update delivery charges based on selected option
+function updateDeliveryCharges() {
+  const deliveryCharges = 100; // Delivery charges
+  const totalOrder = calculateTotalOrder(); // Calculate total order without delivery charges
+  const salesTax = totalOrder * 0.12; // Calculate sales tax
+
+  let totalAmount;
+
+  if (deliveryOptionInput.checked) {
+    // If delivery is selected, add delivery charges
+    totalAmount = totalOrder + salesTax + deliveryCharges;
+    document.getElementById("deliveryCharges").textContent = `SEK ${deliveryCharges.toFixed(2)} :-`;
+  } else {
+    // If pickup is selected, exclude delivery charges
+    totalAmount = totalOrder + salesTax;
+    document.getElementById("deliveryCharges").textContent = `SEK 0.00 :-`;
+  }
+
+  // Update the total amount displayed
+  document.getElementById("totalAmount").textContent = `SEK ${totalAmount.toFixed(2)} :-`;
+}
+
+// Function to calculate the total order without delivery charges
+function calculateTotalOrder() {
+  let totalOrder = 0;
+  cartItems.forEach((item) => {
+    totalOrder += calculateItemTotal(item);
+  });
+  return totalOrder;
+}

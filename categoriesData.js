@@ -49,7 +49,7 @@ const categoryData = {
     },
     2: {
       id: 2,
-      title: "Daredevil - het chili",
+      title: "Daredevil - Spicy",
       location: "Lorem Ipsum Johar Town",
       img: "/Assets/food1.jpg",
       description:
@@ -96,7 +96,7 @@ const categoryData = {
     },
     3: {
       id: 3,
-      title: "Bohemian - rödbeta",
+      title: "Bohemian - Beetroot",
       location: "Lorem Ipsum Johar Town",
       img: "/Assets/food1.jpg",
       description:
@@ -143,7 +143,7 @@ const categoryData = {
     },
     4: {
       id: 4,
-      title: "Genovese - pesto",
+      title: "Genovese - pasta",
       location: "Lorem Ipsum Johar Town",
       img: "/Assets/food1.jpg",
       description:
@@ -190,7 +190,7 @@ const categoryData = {
     },
     5: {
       id: 5,
-      title: "Greek - vitlök & yogurt",
+      title: "Greek - Garlic & Yogurt",
       location: "Lorem Ipsum Johar Town",
       img: "/Assets/food1.jpg",
       description:
@@ -237,7 +237,7 @@ const categoryData = {
     },
     6: {
       id: 6,
-      title: "Hippie - hela kikärtor & persilja",
+      title: "Hippie - whole chickpeas & Parsley",
       location: "Lorem Ipsum Johar Town",
       img: "/Assets/food1.jpg",
       description:
@@ -286,7 +286,7 @@ const categoryData = {
   Wraps: {
     1: {
       id: 1,
-      title: "Kycklingwrap",
+      title: "Chicken Wrap",
       location: "Lorem Ipsum DHA",
       img: "/Assets/food2.jpg",
       description:
@@ -303,7 +303,7 @@ const categoryData = {
     },
     2: {
       id: 2,
-      title: "Sucukkorvwrap",
+      title: "Halloumi Wrap",
       location: "Lorem Ipsum Gulberg",
       img: "/Assets/food3.jpg",
       description:
@@ -320,7 +320,7 @@ const categoryData = {
     },
     3: {
       id: 3,
-      title:   "Halloumiwrap",
+      title:   "Sucuk Sausage wrap",
       location: "Lorem Ipsum Gulberg",
       img: "/Assets/food3.jpg",
       description:
@@ -337,7 +337,7 @@ const categoryData = {
     },
     4: {
       id: 4,
-      title:   "Falafelwrap",
+      title:   "Falafel wrap",
       location: "Lorem Ipsum Gulberg",
       img: "/Assets/food3.jpg",
       description:
@@ -358,7 +358,7 @@ const categoryData = {
   Salads: {
     1: {
       id: 1,
-      title: "Räksallad",
+      title: "Shrimp Salad",
       location: "Lorem Ipsum Mall Road",
       img: "/Assets/food4.jpg",
       description:
@@ -376,7 +376,7 @@ const categoryData = {
     },
     2: {
       id: 2,
-      title: "Caesarsallad med kyckling",
+      title: "Chicken Caesar Salad",
       location: "Lorem Ipsum Cantt",
       img: "/Assets/food5.jpg",
       description:
@@ -393,7 +393,7 @@ const categoryData = {
     },
     3: {
       id: 3,
-      title: "Rucola- & fetaostsallad",
+      title: "Rucuola & Feta Cheese Salad",
       location: "Lorem Ipsum Mall Road",
       img: "/Assets/food4.jpg",
       description:
@@ -410,7 +410,7 @@ const categoryData = {
     },
     4: {
       id: 4,
-      title: "Pastasallad",
+      title: "Pasta salad",
       location: "Lorem Ipsum Cantt",
       img: "/Assets/food5.jpg",
       description:
@@ -446,7 +446,7 @@ const categoryData = {
     },
     2: {
       id: 2,
-      title: "Oliver",
+      title: "Olives",
       location: "Lorem Ipsum Center",
       img: "/Assets/food7.jpg",
       description:
@@ -463,7 +463,7 @@ const categoryData = {
   Sweets: {
     1: {
       id: 1,
-      title: "Halva",
+      title: "Halva 130g",
       location: "Lorem Ipsum Town",
       img: "/Assets/food6.jpg",
       description:
@@ -478,7 +478,7 @@ const categoryData = {
     },
     2: {
       id: 2,
-      title: "Baklava",
+      title: "Baklava 120g",
       location: "Lorem Ipsum Center",
       img: "/Assets/food7.jpg",
       description:
