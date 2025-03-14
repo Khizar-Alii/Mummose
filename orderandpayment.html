@@ -26,12 +26,16 @@
     <!-- css for index -->
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="orderandpayment.css" />
-    <link rel="stylesheet" href="customnav.css">
+    <link rel="stylesheet" href="customnav.css" />
   </head>
   <body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
-    <div class="container-fluid p-0" style="position: relative">
+    <div
+      class="container-fluid p-0"
+      id="maincontainercatering"
+      style="position: relative"
+    >
       <div class="d-xl-block" id="section">
-        <div class="row m-0" style="width: 1005">
+        <div class="row m-0">
           <div class="col-12 p-0">
             <div class="">
               <img
@@ -238,20 +242,26 @@
           </div>
 
           <!-- content for information Details -->
-          <h1
-            class="mb-4 se headingMainColorful"
-            style="font-family: 'belmonte'; color: #096e6c; text-align: center"
-          >
-            Order and Payment Details
-          </h1>
-          <div class="headline">
-            <h2 class="secondtitle">Information Details</h2>
-            <h2 class="firsttitle">Payment Process</h2>
-          </div>
+          <div class="paymentmain">
+            <h1
+              class="mb-4 se headingMainColorful"
+              style="
+                font-family: 'belmonte';
+                color: #096e6c;
+                text-align: center;
+              "
+            >
+              Order and Payment Details
+            </h1>
+            <div class="headline">
+              <h2 class="secondtitle">Information Details</h2>
+              <h2 class="firsttitle">Payment Process</h2>
+            </div>
 
-          <div class="PaymentCont">
-            <div class="PaymentContLeft"></div>
-            <div class="PaymentContRight"></div>
+            <div class="PaymentCont">
+              <div class="PaymentContLeft"></div>
+              <div class="PaymentContRight"></div>
+            </div>
           </div>
 
           <!-- footer -->
@@ -451,5 +461,6 @@
         $(this).ekkoLightbox();
       });
     </script>
+    <script src="flytocart.js"></script>
   </body>
 </html>

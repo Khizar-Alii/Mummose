@@ -6,7 +6,45 @@
     align-items: center;
     padding: 0;
 }
+/* Styles for smaller screens */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        text-align: center !important; 
+    }
 
+    .navbar-nav .nav-item {
+        margin: 3px 0 !important;
+    }
+
+    .navbar-nav .nav-link {
+        display: inline-block; 
+        text-align: center !important;
+    }
+
+    .navbar-collapse,
+    .navbar-nav,
+    .navbar-nav .nav-item,
+    .navbar-nav .nav-link {
+        background-color: transparent !important; 
+        text-align: center !important;
+        color: white !important;
+
+    }
+}
+
+.moblisticons{
+    background-color: transparent !important; 
+    color: white !important;
+    text-align: center !important;
+}
+.headingMainColorful {
+    transition:  margin-top 0.3s ease-in-out !important;
+  }
+  #section {
+    transition: margin-top 0.3s ease-in-out;
+  }
+  
+  
 
 .navbar-brand {
     height: 100%;
@@ -22,8 +60,7 @@
 .navbar-nav {
     display: flex;
     align-items: center;
-    height: 100%;
-    /* Ensure nav items take the full height of the navbar */
+    /* height: 100%; */
     margin: 0;
     padding: 0;
 }
@@ -36,9 +73,9 @@
 .nav-link {
     display: flex;
     align-items: center;
-    height: 100%;
-    /* Ensure links take the full height of the navbar */
-    padding: 0 10px;
+    width: 100%;
+    background: transparent !important;
+
 }
 
 @media screen and (max-width : 1050px) {
@@ -67,62 +104,12 @@
         height: 60px;
     }
 }
-
-
 .moblisticons {
     display: none !important;
-}
-
-/* Background color for the dropdown menu */
-@media (max-width: 1200px) {
-    .navbar-collapse {
-        background-color: #000;
-        /* Black background color */
-        padding: 10px;
-        /* Add some padding for better spacing */
-        border-radius: 5px;
-        /* Optional: Add rounded corners */
-    }
-
-    .navbar-nav {
-        width: 100%;
-        /* Ensure the nav takes full width */
-    }
-
-    .nav-item {
-        margin: 10px 0;
-        /* Add spacing between items */
-    }
-
-    .nav-link {
-        color: #fff !important;
-        /* Ensure text is white */
-    }
-
-    .cateringmenubtn a {
-        color: #fff !important;
-        /* Ensure button text is white */
-    }
-
-    .dropdown-menu {
-        background-color: #000;
-        /* Black background for dropdown items */
-    }
-
-    .dropdown-item {
-        color: #fff !important;
-        /* Ensure dropdown text is white */
-    }
-
-    .dropdown-item:hover {
-        background-color: #333;
-        /* Darker background on hover */
-    }
 }
 
 @media screen and (max-width : 1200px) {
     .moblisticons {
         display: block !important;
     }
-
 }

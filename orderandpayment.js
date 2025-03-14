@@ -132,6 +132,10 @@ document.addEventListener("DOMContentLoaded", () => {
   totalOrderCont.classList.add("totalOrderCont");
   paymentContLeftOrderOptions.appendChild(totalOrderCont);
 
+
+  const totalOrderContWrap = document.createElement("div");
+  totalOrderContWrap.classList.add("totalOrderContWrap");
+
   const deliveryOption = document.createElement("label");
   deliveryOption.innerHTML = `
       <input type="radio" class = "topping-radio-payment" name="deliveryOption" value="delivery" checked />
@@ -144,8 +148,9 @@ document.addEventListener("DOMContentLoaded", () => {
       Pickup
     `;
 
-  totalOrderCont.appendChild(deliveryOption);
-  totalOrderCont.appendChild(pickupOption);
+    totalOrderContWrap.appendChild(deliveryOption)
+    totalOrderContWrap.appendChild(pickupOption)
+  totalOrderCont.appendChild(totalOrderContWrap);
   paymentContLeft.appendChild(paymentContLeftOrderOptions);
 
   // Add Total Order Section
@@ -247,29 +252,35 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get the PaymentContRight container
   const paymentContRight = document.querySelector(".PaymentContRight");
 
-  // Add Payment Information Heading
-  const paymentHeading = document.createElement("h2");
-  paymentHeading.textContent = "Payment Information";
-  paymentHeading.classList.add("paymentHeading");
-  paymentContRight.appendChild(paymentHeading);
+   // Add Payment Information Heading
+   const paymentHeading = document.createElement("h2");
+   paymentHeading.textContent = "Payment Information";
+   paymentHeading.classList.add("paymentHeading");
+   paymentContRight.appendChild(paymentHeading);
+
+  const paymentContRightWrapper = document.createElement("div");
+  paymentContRightWrapper.classList.add("paymentContRightWrapper")
+  paymentContRight.appendChild(paymentContRightWrapper)
+
+ 
 
   // Add Name on Card Label and Input
   const nameOnCardLabel = document.createElement("label");
   nameOnCardLabel.textContent = "Name on Card";
   nameOnCardLabel.classList.add("paymentLabel");
-  paymentContRight.appendChild(nameOnCardLabel);
+  paymentContRightWrapper.appendChild(nameOnCardLabel);
 
   const nameOnCardInput = document.createElement("input");
   nameOnCardInput.type = "text";
   nameOnCardInput.placeholder = "Name on Card";
   nameOnCardInput.classList.add("paymentInput");
-  paymentContRight.appendChild(nameOnCardInput);
+  paymentContRightWrapper.appendChild(nameOnCardInput);
 
   // Add Card Information Label and Input
   const cardInfoLabel = document.createElement("label");
   cardInfoLabel.textContent = "Card Information";
   cardInfoLabel.classList.add("paymentLabel");
-  paymentContRight.appendChild(cardInfoLabel);
+  paymentContRightWrapper.appendChild(cardInfoLabel);
 
   const cardInfoInputContainer = document.createElement("div");
   cardInfoInputContainer.classList.add("cardInfoInputContainer");
@@ -300,7 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   cardInfoInputContainer.appendChild(cardInfoInput);
   cardInfoInputContainer.appendChild(cardIcons);
-  paymentContRight.appendChild(cardInfoInputContainer);
+  paymentContRightWrapper.appendChild(cardInfoInputContainer);
 
   // Add Expiry Date and CVC Inputs
   const expiryCvcContainer = document.createElement("div");
@@ -331,7 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   expiryCvcContainer.appendChild(expiryDateInput);
   expiryCvcContainer.appendChild(CvcContainer);
-  paymentContRight.appendChild(expiryCvcContainer);
+  paymentContRightWrapper.appendChild(expiryCvcContainer);
 
   // Add Billing Address Checkbox
   const billingAddressCheckboxContainer = document.createElement("div");
@@ -351,13 +362,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   billingAddressCheckboxContainer.appendChild(billingAddressCheckbox);
   billingAddressCheckboxContainer.appendChild(billingAddressLabel);
-  paymentContRight.appendChild(billingAddressCheckboxContainer);
+  paymentContRightWrapper.appendChild(billingAddressCheckboxContainer);
 
   // Add Proceed with Payment Button
   const proceedPaymentButton = document.createElement("button");
   proceedPaymentButton.textContent = "Proceed with Payment";
   proceedPaymentButton.classList.add("proceedPaymentButton");
-  paymentContRight.appendChild(proceedPaymentButton);
+  paymentContRightWrapper.appendChild(proceedPaymentButton);
 });
 
 // Function to validate the Name on Card

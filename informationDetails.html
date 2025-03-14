@@ -26,12 +26,16 @@
     <!-- css for index -->
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="informationdetails.css" />
-    <link rel="stylesheet" href="customnav.css">
+    <link rel="stylesheet" href="customnav.css" />
   </head>
   <body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
-    <div class="container-fluid p-0" style="position: relative">
+    <div
+      class="container-fluid p-0"
+      id="maincontainercatering"
+      style="position: relative"
+    >
       <div class="d-xl-block" id="section">
-        <div class="row m-0" style="width: 1005">
+        <div class="row m-0">
           <div class="col-12 p-0">
             <div class="">
               <img
@@ -237,328 +241,353 @@
             </div>
           </div>
 
-          <!-- content for information Details -->
-          <h1
-            class="mb-4 se headingMainColorful"
-            style="font-family: 'belmonte'; color: #096e6c; text-align: center"
-          >
-            Information Details
-          </h1>
-          <div class="headline">
-            <h2 class="firsttitle">Name and Address</h2>
-            <h2 class="secondtitle">Payment Process</h2>
-          </div>
+          <div class="container">
+            <!-- content for information Details -->
+            <h1
+              class="mb-4 se headingMainColorful"
+              style="
+                font-family: 'belmonte';
+                color: #096e6c;
+                text-align: center;
+              "
+            >
+              Information Details
+            </h1>
+            <div class="headline">
+              <h2 class="firsttitle">Name and Address</h2>
+              <h2 class="secondtitle">Payment Process</h2>
+            </div>
 
-          <!-- Form Container -->
-          <div class="form-container">
-            <form id="informationForm">
-              <!-- Full Name -->
-              <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  placeholder="Enter your full name"
-                  required
-                />
-                <span class="error-message" id="fullNameError"></span>
-              </div>
+            <!-- Form Container -->
+            <div class="form-container">
+              <form id="informationForm">
+                <!-- Full Name -->
+                <div class="form-group">
+                  <label for="fullName">Full Name</label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                  <span class="error-message" id="fullNameError"></span>
+                </div>
 
-              <!-- Contact Information -->
-              <div class="form-group">
-                <label for="contactInfo">Contact Information</label>
-                <input
-                  type="text"
-                  id="contactInfo"
-                  name="contactInfo"
-                  placeholder="Enter contact information"
-                  required
-                />
-                <span class="error-message" id="contactInfoError"></span>
-              </div>
+                <!-- Contact Information -->
+                <div class="form-group">
+                  <label for="contactInfo">Contact Information</label>
+                  <input
+                    type="text"
+                    id="contactInfo"
+                    name="contactInfo"
+                    placeholder="Enter contact information"
+                    required
+                  />
+                  <span class="error-message" id="contactInfoError"></span>
+                </div>
 
-              <!-- Email Address -->
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email address"
-                  required
-                />
-                <span class="error-message" id="emailError"></span>
-              </div>
+                <!-- Email Address -->
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                  />
+                  <span class="error-message" id="emailError"></span>
+                </div>
 
-              <!-- Address Verification -->
-              <div class="address-verification">
-                <label>Address Verification</label>
-                <div class="address-verification-inputs">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      id="streetName"
-                      name="streetName"
-                      placeholder="Enter street name (Stockholm city only)"
-                      required
-                    />
-                    <span class="error-message" id="streetNameError"></span>
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      id="buildingNumber"
-                      name="buildingNumber"
-                      placeholder="Building Number"
-                      required
-                    />
-                    <span class="error-message" id="buildingNumberError"></span>
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      id="zipCode"
-                      name="zipCode"
-                      placeholder="Zip Code / Area Code"
-                      required
-                    />
-                    <span class="error-message" id="zipCodeError"></span>
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      id="entranceCode"
-                      name="entranceCode"
-                      placeholder="Enterance Code"
-                      required
-                    />
-                    <span class="error-message" id="entranceCodeError"></span>
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      id="floor"
-                      name="floor"
-                      placeholder="Floor"
-                      required
-                    />
-                    <span class="error-message" id="floorError"></span>
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      id="apartment"
-                      name="apartment"
-                      placeholder="Apartment company Name / Number"
-                      required
-                    />
-                    <span class="error-message" id="apartmentError"></span>
+                <!-- Address Verification -->
+                <div class="address-verification">
+                  <label>Address Verification</label>
+                  <div class="address-verification-inputs">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        id="streetName"
+                        name="streetName"
+                        placeholder="Enter street name (Stockholm city only)"
+                        required
+                      />
+                      <span class="error-message" id="streetNameError"></span>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        id="buildingNumber"
+                        name="buildingNumber"
+                        placeholder="Building Number"
+                        required
+                      />
+                      <span
+                        class="error-message"
+                        id="buildingNumberError"
+                      ></span>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        id="zipCode"
+                        name="zipCode"
+                        placeholder="Zip Code / Area Code"
+                        required
+                      />
+                      <span class="error-message" id="zipCodeError"></span>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        id="entranceCode"
+                        name="entranceCode"
+                        placeholder="Enterance Code"
+                        required
+                      />
+                      <span class="error-message" id="entranceCodeError"></span>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        id="floor"
+                        name="floor"
+                        placeholder="Floor"
+                        required
+                      />
+                      <span class="error-message" id="floorError"></span>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        id="apartment"
+                        name="apartment"
+                        placeholder="Apartment company Name / Number"
+                        required
+                      />
+                      <span class="error-message" id="apartmentError"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Note to Rider -->
-              <div class="form-group">
-                <label for="note">Note to Rider</label>
-                <textarea
-                  id="note"
-                  name="note"
-                  placeholder="Enter note here"
-                  rows="4"
-                ></textarea>
-                <span class="error-message" id="noteError"></span>
-              </div>
+                <!-- Note to Rider -->
+                <div class="form-group">
+                  <label for="note">Note to Rider</label>
+                  <textarea
+                    id="note"
+                    name="note"
+                    placeholder="Enter note here"
+                    rows="4"
+                  ></textarea>
+                  <span class="error-message" id="noteError"></span>
+                </div>
 
-              <!-- Submit Button -->
-              <button type="submit" class="submit-btn">
-                Confirm Information
-              </button>
-            </form>
-          </div>
-          <!-- location footer -->
-          <div class="contact row ml-0 mr-0 mt-lg-5 pt-5" id="section4">
-            <div class="col-md-6 mt-5">
-              <h1
-                class="mb-4 en"
-                style="font-family: 'belmonte'; color: #096e6c; font-size: 50px"
-              >
-                <span style="font-family: 'belmonte'; color: #85c442"
-                  >Contact</span
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">
+                  Confirm Information
+                </button>
+              </form>
+            </div>
+            <!-- contact footer -->
+            <div class="contact row ml-0 mr-0 mt-lg-5 pt-5" id="section4">
+              <div class="col-md-6 mt-5">
+                <h1
+                  class="mb-4 en"
+                  style="
+                    font-family: 'belmonte';
+                    color: #096e6c;
+                    font-size: 50px;
+                  "
                 >
-                Us
-              </h1>
-              <h1
-                class="mb-4 se"
-                style="font-family: 'belmonte'; color: #096e6c; font-size: 50px"
-              >
-                <span style="font-family: 'belmonte'; color: #85c442"
-                  >Kontakta
-                </span>
-                Oss
-              </h1>
-              <p class="en response">
-                <img
-                  src="Assets/location.png"
-                  alt=""
-                  class="locton pr-1 mt-1"
-                />
-                <span span class="ml-2"
-                  >Klara Norra Kyrkogata32
-                  <br />
-                  11122 Stockholm</span
+                  <span style="font-family: 'belmonte'; color: #85c442"
+                    >Contact</span
+                  >
+                  Us
+                </h1>
+                <h1
+                  class="mb-4 se"
+                  style="
+                    font-family: 'belmonte';
+                    color: #096e6c;
+                    font-size: 50px;
+                  "
                 >
-              </p>
-              <p class="se response d-inline-flex">
-                <img
-                  src="Assets/location.png"
-                  alt=""
-                  class="locton pr-1 mt-1"
-                />
-                <span class="ml-2"
-                  >Klara Norra Kyrkogata 32
-                  <br />
-                  11122 Stockholm
-                </span>
-              </p>
-              <p class="en">
-                <img src="Assets/phone.png" alt="" class="locton pr-2" />+46 701
-                75 65 65
-              </p>
-              <p class="se">
-                <img src="Assets/phone.png" alt="" class="locton pr-2" />+46 701
-                75 65 65
-              </p>
-              <p class="en">
-                <i class="fa fa-envelope pr-2" style="color: #096e6c"></i>
-                info@mummus.se
-              </p>
-              <p class="se">
-                <i class="fa fa-envelope pr-2" style="color: #096e6c"></i>
-                info@mummus.se
-              </p>
-              <p class="en">
-                <img src="Assets/time.png" alt="" class="locton pr-1" /> Please
-                check our opening hours
-                <a href="https://g.co/kgs/T1pnvYw">here</a>
-              </p>
-              <p class="se">
-                <img src="Assets/time.png" alt="" class="locton pr-1" /> Våra
-                öppettider finns <a href="https://g.co/kgs/T1pnvYw">här</a>
-              </p>
-              <h1
-                class="mb-2 mt-5 en"
-                style="font-family: 'belmonte'; color: #096e6c; font-size: 30px"
-              >
-                Follow Us
-              </h1>
-              <h1
-                class="mb-2 mt-5 se"
-                style="font-family: 'belmonte'; color: #096e6c; font-size: 30px"
-              >
-                Följ Oss
-              </h1>
-              <div class="socialmedia pt-3">
-                <a href="https://instagram.com/mummus.se?igshid=7toboeu31sp">
+                  <span style="font-family: 'belmonte'; color: #85c442"
+                    >Kontakta
+                  </span>
+                  Oss
+                </h1>
+                <p class="en response">
                   <img
-                    src="Assets/Instagram-green.png"
+                    src="Assets/location.png"
                     alt=""
-                    class="mr-3 non-hover"
+                    class="locton pr-1 mt-1"
                   />
-                  <img src="Assets/Instagram.png" alt="" class="mr-3 hover" />
-                </a>
-                <a href="https://www.facebook.com/Mummus-114979863593938/">
+                  <span span class="ml-2"
+                    >Klara Norra Kyrkogata32
+                    <br />
+                    11122 Stockholm</span
+                  >
+                </p>
+                <p class="se response d-inline-flex">
                   <img
-                    src="Assets/Facebook-green.png"
+                    src="Assets/location.png"
                     alt=""
-                    class="mr-3 non-hover"
+                    class="locton pr-1 mt-1"
                   />
-                  <img src="Assets/Facebook.png" alt="" class="mr-3 hover" />
-                </a>
-                <a href="mailto:info@mummus.se">
-                  <img
-                    src="Assets/email-green.png"
-                    alt=""
-                    class="mr-3 non-hover"
-                  />
-                  <img src="Assets/email.png" alt="" class="mr-3 hover" />
-                </a>
-              </div>
-            </div>
-            <div class="col-md-6 pt-3 mt-lg-5">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.9034643273696!2d18.05573091615477!3d59.334565517644776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d6725633ffd%3A0xf7cc2bfa147b6a9e!2sKlara%20Norra%20kyrkogata%2032%2C%20111%2022%20Stockholm%2C%20Sweden!5e0!3m2!1sen!2s!4v1594796555953!5m2!1sen!2s"
-                class="w-100 map"
-                frameborder="0"
-                style="border: 0"
-                allowfullscreen=""
-                aria-hidden="false"
-                tabindex="0"
-              ></iframe>
-            </div>
-          </div>
-          <!-- footer Container -->
-          <footer
-            class="footer"
-            id="section5"
-            style="position: relative; bottom: 0"
-          >
-            <div class="row m-0 footer-section pb-4">
-              <div class="col-lg-3 col-md-4 self-flex text-md-center">
-                <img src="Assets/footerlogo.png" class="w-50" alt="" />
-              </div>
-              <div
-                class="col-lg-6 col-md-6 pl-4 text-white text-uppercase self-flex"
-              >
-                <div class="footer-headings en">
-                  <a href="#section" class="text-reset"
-                    ><span class="">home</span></a
-                  >
-                  <a href="#section1" class="text-reset"
-                    ><span class="">About</span></a
-                  >
-                  <a href="#section2" class="text-reset"
-                    ><span class="">Menu</span></a
-                  >
-                  <br class="d-lg-none d-md-block d-none" />
-
-                  <a href="#section3" class="text-reset"
-                    ><span class="">Gallery</span></a
-                  >
-                  <a href="#section4" class="text-reset"
-                    ><span class="">Contact</span></a
-                  >
-                  <br />
-                  <small class="pl-lg-3 pt-2 title-1"
-                    >Mummus 2020. All Rights Reserved</small
-                  >
+                  <span class="ml-2"
+                    >Klara Norra Kyrkogata 32
+                    <br />
+                    11122 Stockholm
+                  </span>
+                </p>
+                <p class="en">
+                  <img src="Assets/phone.png" alt="" class="locton pr-2" />+46
+                  701 75 65 65
+                </p>
+                <p class="se">
+                  <img src="Assets/phone.png" alt="" class="locton pr-2" />+46
+                  701 75 65 65
+                </p>
+                <p class="en">
+                  <i class="fa fa-envelope pr-2" style="color: #096e6c"></i>
+                  info@mummus.se
+                </p>
+                <p class="se">
+                  <i class="fa fa-envelope pr-2" style="color: #096e6c"></i>
+                  info@mummus.se
+                </p>
+                <p class="en">
+                  <img src="Assets/time.png" alt="" class="locton pr-1" />
+                  Please check our opening hours
+                  <a href="https://g.co/kgs/T1pnvYw">here</a>
+                </p>
+                <p class="se">
+                  <img src="Assets/time.png" alt="" class="locton pr-1" /> Våra
+                  öppettider finns <a href="https://g.co/kgs/T1pnvYw">här</a>
+                </p>
+                <h1
+                  class="mb-2 mt-5 en"
+                  style="
+                    font-family: 'belmonte';
+                    color: #096e6c;
+                    font-size: 30px;
+                  "
+                >
+                  Follow Us
+                </h1>
+                <h1
+                  class="mb-2 mt-5 se"
+                  style="
+                    font-family: 'belmonte';
+                    color: #096e6c;
+                    font-size: 30px;
+                  "
+                >
+                  Följ Oss
+                </h1>
+                <div class="socialmedia pt-3">
+                  <a href="https://instagram.com/mummus.se?igshid=7toboeu31sp">
+                    <img
+                      src="Assets/Instagram-green.png"
+                      alt=""
+                      class="mr-3 non-hover"
+                    />
+                    <img src="Assets/Instagram.png" alt="" class="mr-3 hover" />
+                  </a>
+                  <a href="https://www.facebook.com/Mummus-114979863593938/">
+                    <img
+                      src="Assets/Facebook-green.png"
+                      alt=""
+                      class="mr-3 non-hover"
+                    />
+                    <img src="Assets/Facebook.png" alt="" class="mr-3 hover" />
+                  </a>
+                  <a href="mailto:info@mummus.se">
+                    <img
+                      src="Assets/email-green.png"
+                      alt=""
+                      class="mr-3 non-hover"
+                    />
+                    <img src="Assets/email.png" alt="" class="mr-3 hover" />
+                  </a>
                 </div>
-                <div class="footer-headings se">
-                  <a href="#section" class="text-reset"
-                    ><span class="">HEM</span></a
-                  >
-                  <a href="#section1" class="text-reset"
-                    ><span class="">OM OSS</span></a
-                  >
-                  <a href="#section2" class="text-reset"
-                    ><span class="">MENY</span></a
-                  >
-                  <br class="d-lg-none d-md-block d-none" />
+              </div>
+              <div class="col-md-6 pt-3 mt-lg-5">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.9034643273696!2d18.05573091615477!3d59.334565517644776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d6725633ffd%3A0xf7cc2bfa147b6a9e!2sKlara%20Norra%20kyrkogata%2032%2C%20111%2022%20Stockholm%2C%20Sweden!5e0!3m2!1sen!2s!4v1594796555953!5m2!1sen!2s"
+                  class="w-100 map"
+                  frameborder="0"
+                  style="border: 0"
+                  allowfullscreen=""
+                  aria-hidden="false"
+                  tabindex="0"
+                ></iframe>
+              </div>
+            </div>
+            <!-- footer -->
+            <footer
+              class="footer"
+              id="section5"
+              style="position: relative; bottom: 0"
+            >
+              <div class="row m-0 footer-section pb-4">
+                <div class="col-lg-3 col-md-4 self-flex text-md-center">
+                  <img src="Assets/footerlogo.png" class="w-50" alt="" />
+                </div>
+                <div
+                  class="col-lg-6 col-md-6 pl-4 text-white text-uppercase self-flex"
+                >
+                  <div class="footer-headings en">
+                    <a href="#section" class="text-reset"
+                      ><span class="">home</span></a
+                    >
+                    <a href="#section1" class="text-reset"
+                      ><span class="">About</span></a
+                    >
+                    <a href="#section2" class="text-reset"
+                      ><span class="">Menu</span></a
+                    >
+                    <br class="d-lg-none d-md-block d-none" />
 
-                  <a href="#section3" class="text-reset"
-                    ><span class="">GALLERI</span></a
-                  >
-                  <a href="#section4" class="text-reset"
-                    ><span class="">KONTAKT</span></a
-                  >
-                  <br />
-                  <div class="pl-lg-3 mt-2 title-1">
-                    Mummus 2020. Alla rättigheter förbehålls
+                    <a href="#section3" class="text-reset"
+                      ><span class="">Gallery</span></a
+                    >
+                    <a href="#section4" class="text-reset"
+                      ><span class="">Contact</span></a
+                    >
+                    <br />
+                    <small class="pl-lg-3 pt-2 title-1"
+                      >Mummus 2020. All Rights Reserved</small
+                    >
+                  </div>
+                  <div class="footer-headings se">
+                    <a href="#section" class="text-reset"
+                      ><span class="">HEM</span></a
+                    >
+                    <a href="#section1" class="text-reset"
+                      ><span class="">OM OSS</span></a
+                    >
+                    <a href="#section2" class="text-reset"
+                      ><span class="">MENY</span></a
+                    >
+                    <br class="d-lg-none d-md-block d-none" />
+
+                    <a href="#section3" class="text-reset"
+                      ><span class="">GALLERI</span></a
+                    >
+                    <a href="#section4" class="text-reset"
+                      ><span class="">KONTAKT</span></a
+                    >
+                    <br />
+                    <div class="pl-lg-3 mt-2 title-1">
+                      Mummus 2020. Alla rättigheter förbehålls
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </footer>
+            </footer>
+          </div>
         </div>
       </div>
     </div>
@@ -573,5 +602,6 @@
         $(this).ekkoLightbox();
       });
     </script>
+    <script src="flytocart.js"></script>
   </body>
 </html>

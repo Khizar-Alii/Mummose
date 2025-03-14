@@ -1,7 +1,16 @@
+
+
 .headingMainColorful {
     padding-top: 100px !important;
 }
-
+.subheading{
+    text-align: center;
+    font-size: 24px;
+    color: #232323;
+    line-height: 30px;
+    font-weight: 400;
+    /* font-family: Gontserrat; */
+}
 
 /* catering button */
 
@@ -23,7 +32,6 @@
 }
 
 
-/* Hide the navbar between 1199px and 990px */
 
 .cateringmenubtn {
     background-color: transparent;
@@ -33,6 +41,12 @@
     margin: 0;
     position: relative;
     display: inline-block;
+    width: 190px;
+    display: flex;
+    border: none;
+    outline: none;
+    width: 190px;
+    height: 42px;
 }
 
 
@@ -40,28 +54,29 @@
 .cateringmenubtn a {
     display: inline-block;
     background-color: #00706E;
-    border: none;
-    outline: none;
     color: white;
     border-radius: 10px;
     text-transform: uppercase;
-    padding: 15px 30px;
+    /* padding: 15px 30px; */
+    padding: 10px 0;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
     text-align: center;
-    position: relative;
     z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 /* Custom dashed border effect */
 .cateringmenubtn::before {
     content: "";
     position: absolute;
-    top: 10px;
-    left: 0px;
-    right: 0px;
-    bottom: 10px;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
     border-radius: 5px;
     padding: 0;
     background:
@@ -100,7 +115,7 @@ body {
     display: none;
 }
 
-@media screen and (max-width : 1400px) {
+/* @media screen and (max-width : 1400px) {
     .cateringmenubtn {
         padding: 14px 4px;
     }
@@ -109,7 +124,7 @@ body {
         font-size: 12px;
         padding: 10px 15px;
     }
-}
+} */
 
 @media screen and (max-width : 991px) {
     .moblisticons {
@@ -170,6 +185,7 @@ body {
     opacity: 100%;
 }
 
+
 /* Adding a smooth border-bottom transition */
 .categoryItem::after {
     content: "";
@@ -193,9 +209,12 @@ body {
 
 /* Category Items Container */
 .categoryItemsContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    gap: 30px;
     margin: 20px 60px;
     opacity: 0;
     border-radius: 20px;
@@ -203,7 +222,7 @@ body {
 }
 
 /* Responsive: Two columns for medium screens */
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
     .categoryItemsContainer {
         display: flex;
         justify-content: center;
@@ -220,6 +239,12 @@ body {
         justify-content: center;
         flex-wrap: wrap;
         margin: 10px 5px;
+    }
+    .headingMainColorful{
+        font-size: 24px;
+    }
+    .subheading{
+        font-size: 16px;
     }
 }
 
@@ -262,6 +287,12 @@ body {
     /* font-family: Gontserrat, 'Times New Roman', Times, serif; */
 }
 
+@media screen and (max-width:500px) {
+    .categoryCard img {
+        width: 200px;
+        height: 200px;
+    }
+}
 
 /* expand css: */
 
@@ -486,33 +517,7 @@ body {
     border-radius: 2px;
 }
 
-/* payment radio  */
-.topping-radio-payment {
-    appearance: none;
-    width: 14px;
-    height: 14px;
-    border: 1px solid #00706E;
-    border-radius: 5px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease;
-}
 
-.topping-radio-payment:checked {
-    border-radius: 3px;
-}
-
-.topping-radio-payment:checked::before {
-    content: "";
-    width: 7px;
-    height: 7px;
-    background-color: #00706E;
-    position: absolute;
-    border-radius: 2px;
-}
 
 
 .topping-name {
