@@ -797,57 +797,57 @@ function renderCategoryItems(category) {
           )
           .join("");
 
-      card.innerHTML = `
-        <img src="${item.img}" alt="${item.title}">
-        <h1>${item.title}</h1>
-        <p>${item.location}</p>
-        <div class="description" style="display: none;">
-          <h2>Description</h2>
-          <p>${item.description}</p>
-        </div>
-        <div class="notes" style="display: none;">
-          <h2>Notes</h2>
-          <ul>
-            ${item?.notes?.map((note) => `<li>${note}</li>`).join("")}
-          </ul>
-        </div>
-        <div class="serving-pricing" style="display: none;">
-          <div class="details">
-            <div>
-              <h3>Serving</h3>
-              <span>${item.serving}</span>
+          card.innerHTML = `
+          <img src="${item.img}" alt="${item.title}">
+          <h1>${item.title}</h1>
+          <p>${item.location}</p>
+          <div class="description" style="display: none;">
+            <h2>Description</h2>
+            <p>${item.description}</p>
+          </div>
+          <div class="notes" style="display: none;">
+            <h2>Notes</h2>
+            <ul>
+              ${item?.notes?.map((note) => `<li>${note}</li>`).join("")}
+            </ul>
+          </div>
+          <div class="serving-pricing" style="display: none;">
+            <div class="details">
+              <div>
+                <h3>Serving</h3>
+                <span>${item.serving}</span>
+              </div>
+              <div>
+                <h3>Pricing</h3>
+                <span>${item.pricing}</span>
+              </div>
             </div>
-            <div>
-              <h3>Pricing</h3>
-              <span>${item.pricing}</span>
+            <!-- Toppings Section -->
+            <div class="toppings">
+              ${toppingsHTML ? "<h3>Toppings</h3>" : ""}
+              ${toppingsHTML ? toppingsHTML : ""}
             </div>
+        
+            <!-- Grams Section -->
+            <div class="toppings">
+              ${
+                gramsHTML
+                  ? "  <div class= 'gramContainer'><h3>Select Gram:</h3><h3>Price:</h3></div>        "
+                  : ""
+              }
+              ${gramsHTML ? gramsHTML : ""}
+            </div>
+        
+            <!-- Quantity Buttons with Quantity Display in Between -->
+            <div class="quantity-container">
+              <button class="quantity-btn minus">-</button>
+              <span class="quantity">01</span>
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <!-- Add to Cart Button -->
+            <button class="add-to-cart">Add to Cart</button>
           </div>
-          <!-- Toppings Section -->
-          <div class="toppings">
-            ${toppingsHTML ? "<h3>Toppings</h3>" : ""}
-            ${toppingsHTML ? toppingsHTML : ""}
-          </div>
-
-          <!-- Grams Section -->
-          <div class="toppings">
-            ${
-              gramsHTML
-                ? "  <div class= 'gramContainer'><h3>Select Gram:</h3><h3>Price:</h3></div>        "
-                : ""
-            }
-            ${gramsHTML ? gramsHTML : ""}
-          </div>
-
-          <!-- Quantity Button -->
-          <div class="quantity-container">
-            <button class="quantity-btn minus">-</button>
-            <span class="quantity">00</span>
-            <button class="quantity-btn plus">+</button>
-          </div>
-          <!-- Add to Cart Button -->
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      `;
+        `;
 
       // Add click event to toggle expanded state
       card.addEventListener("click", () => {
@@ -893,23 +893,22 @@ function renderCategoryItems(category) {
       const minusButton = card.querySelector(".minus");
       const plusButton = card.querySelector(".plus");
 
-      let quantity = 0;
+      let quantity = 1; // Default quantity is 1
 
       minusButton.addEventListener("click", (e) => {
         e.stopPropagation(); // Prevent card from collapsing
-        if (quantity > 0) {
+        if (quantity > 1) {
           quantity--;
-          quantityElement.textContent = String(quantity).padStart(2, "0"); // Format as 00, 01, 02, etc.
+          quantityElement.textContent = String(quantity).padStart(2, "0"); // Format as 01, 02, etc.
         }
       });
 
       plusButton.addEventListener("click", (e) => {
         e.stopPropagation(); // Prevent card from collapsing
         quantity++;
-        quantityElement.textContent = String(quantity).padStart(2, "0"); // Format as 00, 01, 02, etc.
+        quantityElement.textContent = String(quantity).padStart(2, "0"); // Format as 01, 02, etc.
       });
 
-      // Add to Cart Button Logic
       // Add to Cart Button Logic
       const addToCartButton = card.querySelector(".add-to-cart");
       addToCartButton.addEventListener("click", (e) => {
@@ -939,6 +938,7 @@ function renderCategoryItems(category) {
             }
           : null;
 
+        // Add item to cart with the current quantity
         if (quantity > 0) {
           // Check if the item already exists in the cart
           const existingItemIndex = cartItems.findIndex(
@@ -980,6 +980,11 @@ function renderCategoryItems(category) {
     categoryItemsContainer.style.opacity = "1"; // Fade in effect
   }, 300); // Delay to match transition
 }
+
+
+
+
+
 // Initialize categories and default category items
 renderCategories();
 setActiveCategory("Bowls");

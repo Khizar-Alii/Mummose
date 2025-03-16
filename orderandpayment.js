@@ -1,32 +1,3 @@
-// get user data from user info
-// document.addEventListener("DOMContentLoaded", () => {
-//   const params = new URLSearchParams(window.location.search);
-
-//   const fullName = params.get("fullName");
-//   const contactInfo = params.get("contactInfo");
-//   const email = params.get("email");
-//   const streetName = params.get("streetName");
-//   const buildingNumber = params.get("buildingNumber");
-//   const zipCode = params.get("zipCode");
-//   const entranceCode = params.get("entranceCode");
-//   const floor = params.get("floor");
-//   const apartment = params.get("apartment");
-//   const note = params.get("note");
-
-//   console.log("Full Name:", fullName);
-//   console.log("Contact Info:", contactInfo);
-//   console.log("Email:", email);
-//   console.log("Street Name:", streetName);
-//   console.log("Building Number:", buildingNumber);
-//   console.log("Zip Code:", zipCode);
-//   console.log("Entrance Code:", entranceCode);
-//   console.log("Floor:", floor);
-//   console.log("Apartment:", apartment);
-//   console.log("Note:", note);
-// });
-
-// Get items from the cart that are stored in local storage
-
 document.addEventListener("DOMContentLoaded", () => {
   // Retrieve cart items from localStorage
   const storedCartItems = localStorage.getItem("cart");
@@ -137,13 +108,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const deliveryOption = document.createElement("label");
   deliveryOption.innerHTML = `
-      <input type="radio" class = "topping-radio-payment" name="deliveryOption" value="delivery" checked />
+      <input type="radio" class="topping-radio-payment" name="deliveryOption" value="delivery" checked />
       Delivery
     `;
 
   const pickupOption = document.createElement("label");
   pickupOption.innerHTML = `
-      <input type="radio" class = "topping-radio-payment" name="deliveryOption" value="pickup" />
+      <input type="radio" class="topping-radio-payment" name="deliveryOption" value="pickup" />
       Pickup
     `;
 
@@ -184,7 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
   paymentContLeftTotalOrder.appendChild(totalOrderDiv);
   paymentContLeftTotalOrder.appendChild(salesTaxDiv);
   paymentContLeftTotalOrder.appendChild(deliveryChargesDiv);
-  // paymentContLeftTotalOrder.appendChild(totalAmountDiv);
   paymentContLeft.appendChild(paymentContLeftTotalOrder);
   paymentContLeft.appendChild(totalAmountDiv);
 
@@ -210,6 +180,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Open date picker when clicking anywhere in the date container
+  paymentContLeftDatePicker.addEventListener("click", () => {
+    datePickerInput.showPicker();
+  });
+
   paymentContLeftDatePicker.appendChild(datePickerLabel);
   paymentContLeftDatePicker.appendChild(datePickerInput);
   paymentContLeft.appendChild(paymentContLeftDatePicker);
@@ -224,6 +199,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const timePickerInput = document.createElement("input");
   timePickerInput.type = "time";
   timePickerInput.id = "deliveryTime";
+
+  // Open time picker when clicking anywhere in the time container
+  paymentContLeftTimePicker.addEventListener("click", () => {
+    timePickerInput.showPicker();
+  });
 
   paymentContLeftTimePicker.appendChild(timePickerLabel);
   paymentContLeftTimePicker.appendChild(timePickerInput);
@@ -247,8 +227,6 @@ document.addEventListener("DOMContentLoaded", () => {
   paymentContLeft.appendChild(paymentContLeftSpecialInst);
 
   // Payment Container Right
-
-  // Get the PaymentContRight container
   const paymentContRight = document.querySelector(".PaymentContRight");
 
   // Add Payment Information Heading
@@ -319,7 +297,6 @@ document.addEventListener("DOMContentLoaded", () => {
   expiryDateInput.placeholder = "MM/YY";
   expiryDateInput.classList.add("paymentInput", "expiryDateInput");
 
-  // cvv container
   const CvcContainer = document.createElement("div");
   CvcContainer.classList.add("cvcContainer");
 
@@ -328,7 +305,6 @@ document.addEventListener("DOMContentLoaded", () => {
   cvcInput.placeholder = "CVC";
   cvcInput.classList.add("cvcInput");
 
-  // img
   const cvvIcon = document.createElement("img");
   cvvIcon.src = "Assets/cvc 1.png"; // Replace with actual path
   cvvIcon.alt = "cvc";
@@ -365,170 +341,45 @@ document.addEventListener("DOMContentLoaded", () => {
   proceedPaymentButton.textContent = "Proceed with Payment";
   proceedPaymentButton.classList.add("proceedPaymentButton");
   paymentContRightWrapper.appendChild(proceedPaymentButton);
+
+  // Function to update delivery charges based on selected option
+  function updateDeliveryCharges() {
+    const deliveryCharges = 100; // Delivery charges
+    const totalOrder = calculateTotalOrder(); // Calculate total order without delivery charges
+    const salesTax = totalOrder * 0.12; // Calculate sales tax
+
+    let totalAmount;
+
+    if (deliveryOptionInput.checked) {
+      // If delivery is selected, add delivery charges
+      totalAmount = totalOrder + salesTax + deliveryCharges;
+      document.getElementById("deliveryCharges").textContent = `SEK ${deliveryCharges.toFixed(2)} :-`;
+    } else {
+      // If pickup is selected, exclude delivery charges
+      totalAmount = totalOrder + salesTax;
+      document.getElementById("deliveryCharges").textContent = `SEK 0.00 :-`;
+    }
+
+    // Update the total amount displayed
+    document.getElementById("totalAmount").textContent = `SEK ${totalAmount.toFixed(2)} :-`;
+  }
+
+  // Function to calculate the total order without delivery charges
+  function calculateTotalOrder() {
+    let totalOrder = 0;
+    cartItems.forEach((item) => {
+      totalOrder += calculateItemTotal(item);
+    });
+    return totalOrder;
+  }
+
+  // Add event listeners to delivery options
+  const deliveryOptionInput = document.querySelector('input[name="deliveryOption"][value="delivery"]');
+  const pickupOptionInput = document.querySelector('input[name="deliveryOption"][value="pickup"]');
+
+  deliveryOptionInput.addEventListener("change", updateDeliveryCharges);
+  pickupOptionInput.addEventListener("change", updateDeliveryCharges);
+
+  // Set initial delivery charges and total amount on page load
+  updateDeliveryCharges();
 });
-
-// Function to validate the Name on Card
-const validateNameOnCard = (name) => {
-  const nameRegex = /^[A-Za-z\s]+$/;
-  return name.trim() !== "" && nameRegex.test(name);
-};
-
-// Function to validate the Card Number
-const validateCardNumber = (cardNumber) => {
-  const cardNumberRegex = /^\d{16}$/;
-  return cardNumberRegex.test(cardNumber);
-};
-
-// Function to validate the Expiry Date
-const validateExpiryDate = (expiryDate) => {
-  const expiryDateRegex = /^(0[1-9]|1[0-2])\/\d{2}$/; // MM/YY format
-  if (!expiryDateRegex.test(expiryDate)) return false;
-
-  const [month, year] = expiryDate.split("/");
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear() % 100; // Get last 2 digits of the year
-  const currentMonth = currentDate.getMonth() + 1; // Months are 0-indexed
-
-  if (parseInt(year) < currentYear) return false;
-  if (parseInt(year) === currentYear && parseInt(month) < currentMonth)
-    return false;
-  return true;
-};
-
-// Function to validate the CVC
-const validateCVC = (cvc) => {
-  const cvcRegex = /^\d{3}$/;
-  return cvcRegex.test(cvc);
-};
-
-// Function to display error messages
-const displayError = (inputElement, message) => {
-  const errorElement = document.createElement("div");
-  errorElement.classList.add("errorMessage");
-  errorElement.textContent = message;
-  errorElement.style.color = "red";
-  errorElement.style.fontSize = "12px";
-  errorElement.style.marginTop = "5px";
-
-  // Remove existing error message if any
-  const existingError =
-    inputElement.parentElement.querySelector(".errorMessage");
-  if (existingError) existingError.remove();
-
-  inputElement.parentElement.appendChild(errorElement);
-};
-
-// Function to clear error messages
-const clearError = (inputElement) => {
-  const existingError =
-    inputElement.parentElement.querySelector(".errorMessage");
-  if (existingError) existingError.remove();
-};
-
-// Add event listeners for validation
-nameOnCardInput?.addEventListener("input", () => {
-  if (!validateNameOnCard(nameOnCardInput.value)) {
-    displayError(
-      nameOnCardInput,
-      "Please enter a valid name (letters and spaces only)."
-    );
-  } else {
-    clearError(nameOnCardInput);
-  }
-});
-
-cardInfoInput.addEventListener("input", () => {
-  if (!validateCardNumber(cardInfoInput.value.replace(/\s/g, ""))) {
-    displayError(cardInfoInput, "Please enter a valid 16-digit card number.");
-  } else {
-    clearError(cardInfoInput);
-  }
-});
-
-expiryDateInput.addEventListener("input", () => {
-  if (!validateExpiryDate(expiryDateInput.value)) {
-    displayError(expiryDateInput, "Please enter a valid expiry date (MM/YY).");
-  } else {
-    clearError(expiryDateInput);
-  }
-});
-
-cvcInput.addEventListener("input", () => {
-  if (!validateCVC(cvcInput.value)) {
-    displayError(cvcInput, "Please enter a valid 3-digit CVC.");
-  } else {
-    clearError(cvcInput);
-  }
-});
-
-// Add event listener for the Proceed with Payment button
-proceedPaymentButton.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent form submission for demo purposes
-
-  // Validate all fields
-  const isNameValid = validateNameOnCard(nameOnCardInput.value);
-  const isCardNumberValid = validateCardNumber(
-    cardInfoInput.value.replace(/\s/g, "")
-  );
-  const isExpiryDateValid = validateExpiryDate(expiryDateInput.value);
-  const isCVCValid = validateCVC(cvcInput.value);
-
-  if (!isNameValid) {
-    displayError(
-      nameOnCardInput,
-      "Please enter a valid name (letters and spaces only)."
-    );
-  }
-  if (!isCardNumberValid) {
-    displayError(cardInfoInput, "Please enter a valid 16-digit card number.");
-  }
-  if (!isExpiryDateValid) {
-    displayError(expiryDateInput, "Please enter a valid expiry date (MM/YY).");
-  }
-  if (!isCVCValid) {
-    displayError(cvcInput, "Please enter a valid 3-digit CVC.");
-  }
-
-  // If all fields are valid, proceed with payment
-  if (isNameValid && isCardNumberValid && isExpiryDateValid && isCVCValid) {
-    alert("Payment successful! Redirecting to confirmation page...");
-    // Redirect or perform further actions here
-  }
-});
-
-// Add event listeners to delivery options
-const deliveryOptionInput = document.querySelector('input[name="deliveryOption"][value="delivery"]');
-const pickupOptionInput = document.querySelector('input[name="deliveryOption"][value="pickup"]');
-
-deliveryOptionInput.addEventListener("change", updateDeliveryCharges);
-pickupOptionInput.addEventListener("change", updateDeliveryCharges);
-// Function to update delivery charges based on selected option
-function updateDeliveryCharges() {
-  const deliveryCharges = 100; // Delivery charges
-  const totalOrder = calculateTotalOrder(); // Calculate total order without delivery charges
-  const salesTax = totalOrder * 0.12; // Calculate sales tax
-
-  let totalAmount;
-
-  if (deliveryOptionInput.checked) {
-    // If delivery is selected, add delivery charges
-    totalAmount = totalOrder + salesTax + deliveryCharges;
-    document.getElementById("deliveryCharges").textContent = `SEK ${deliveryCharges.toFixed(2)} :-`;
-  } else {
-    // If pickup is selected, exclude delivery charges
-    totalAmount = totalOrder + salesTax;
-    document.getElementById("deliveryCharges").textContent = `SEK 0.00 :-`;
-  }
-
-  // Update the total amount displayed
-  document.getElementById("totalAmount").textContent = `SEK ${totalAmount.toFixed(2)} :-`;
-}
-
-// Function to calculate the total order without delivery charges
-function calculateTotalOrder() {
-  let totalOrder = 0;
-  cartItems.forEach((item) => {
-    totalOrder += calculateItemTotal(item);
-  });
-  return totalOrder;
-}
